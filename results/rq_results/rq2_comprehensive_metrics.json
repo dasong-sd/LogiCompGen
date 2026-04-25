@@ -1,0 +1,802 @@
+[
+    {
+        "scenario": "bank_manager",
+        "model": "DS-Coder",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 85.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 27.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "DS-Coder",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 2.5,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 97.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 67.5,
+        "instruction_adherence_rate": 22.5,
+        "operational_restriction_rate": 5.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 22.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 17.5,
+        "semantic_error_rate": 82.5,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 10.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 35.0,
+        "semantic_error_rate": 65.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 12.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5-Mini",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5-Mini",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 5.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5-Nano",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 35.0,
+        "instruction_adherence_rate": 37.5,
+        "operational_restriction_rate": 10.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "GPT-5-Nano",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 7.5,
+        "instruction_adherence_rate": 15.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Flash",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 17.5,
+        "operational_restriction_rate": 5.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Flash",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Lite",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 12.5,
+        "instruction_adherence_rate": 27.5,
+        "operational_restriction_rate": 10.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Lite",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 7.5,
+        "instruction_adherence_rate": 2.5,
+        "operational_restriction_rate": 50.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Pro",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 50.0,
+        "instruction_adherence_rate": 2.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Gemini-Pro",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 2.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 80.0,
+        "instruction_adherence_rate": 60.0,
+        "operational_restriction_rate": 20.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 7.5,
+        "semantic_error_rate": 45.0,
+        "instruction_adherence_rate": 12.5,
+        "operational_restriction_rate": 72.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Llama-8B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 37.5,
+        "instruction_adherence_rate": 30.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Llama-8B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 37.5,
+        "operational_restriction_rate": 42.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 10.0,
+        "semantic_error_rate": 87.5,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 32.5,
+        "instruction_adherence_rate": 32.5,
+        "operational_restriction_rate": 30.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 82.5,
+        "instruction_adherence_rate": 12.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 15.0,
+        "instruction_adherence_rate": 45.0,
+        "operational_restriction_rate": 27.5
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "deepseek-coder-v2-lite-instruct",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "bank_manager",
+        "model": "deepseek-coder-v2-lite-instruct",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-Coder",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 32.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 87.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-Coder",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 5.0,
+        "semantic_error_rate": 10.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 92.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 22.5,
+        "instruction_adherence_rate": 30.0,
+        "operational_restriction_rate": 57.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 27.5,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 90.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 25.0,
+        "semantic_error_rate": 72.5,
+        "instruction_adherence_rate": 22.5,
+        "operational_restriction_rate": 22.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 27.5,
+        "semantic_error_rate": 67.5,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 57.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 27.5,
+        "instruction_adherence_rate": 45.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5-Mini",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 37.5,
+        "instruction_adherence_rate": 27.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5-Mini",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5-Nano",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 12.5,
+        "instruction_adherence_rate": 75.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "GPT-5-Nano",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 2.5,
+        "instruction_adherence_rate": 15.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Flash",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 80.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Flash",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 77.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Lite",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 52.5,
+        "instruction_adherence_rate": 27.5,
+        "operational_restriction_rate": 20.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Lite",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 30.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 90.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Pro",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 60.0,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Gemini-Pro",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 42.5,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 10.0,
+        "semantic_error_rate": 82.5,
+        "instruction_adherence_rate": 27.5,
+        "operational_restriction_rate": 17.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 15.0,
+        "semantic_error_rate": 52.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 70.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Llama-8B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 25.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 17.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Llama-8B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 10.0,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 12.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 50.0,
+        "semantic_error_rate": 20.0,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 17.5,
+        "semantic_error_rate": 52.5,
+        "instruction_adherence_rate": 12.5,
+        "operational_restriction_rate": 37.5
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 37.5,
+        "instruction_adherence_rate": 50.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "smart_lock",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 52.5,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 72.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-Coder",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 7.5,
+        "semantic_error_rate": 87.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 12.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-Coder",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 45.0,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 82.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 42.5,
+        "instruction_adherence_rate": 40.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-R1-Qwen-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 5.0,
+        "semantic_error_rate": 27.5,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 32.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 20.0,
+        "semantic_error_rate": 77.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 17.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "DS-R1-Qwen-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 40.0,
+        "semantic_error_rate": 60.0,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 22.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 12.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5-Mini",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 7.5,
+        "instruction_adherence_rate": 15.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5-Mini",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5-Nano",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 25.0,
+        "instruction_adherence_rate": 25.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "GPT-5-Nano",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Flash",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 32.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Flash",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Lite",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 10.0,
+        "instruction_adherence_rate": 60.0,
+        "operational_restriction_rate": 10.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Lite",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 5.0,
+        "instruction_adherence_rate": 2.5,
+        "operational_restriction_rate": 65.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Pro",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 20.0,
+        "instruction_adherence_rate": 57.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Gemini-Pro",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 7.5,
+        "instruction_adherence_rate": 7.5,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 12.5,
+        "semantic_error_rate": 82.5,
+        "instruction_adherence_rate": 47.5,
+        "operational_restriction_rate": 7.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Llama-3.2-3B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 5.0,
+        "semantic_error_rate": 67.5,
+        "instruction_adherence_rate": 20.0,
+        "operational_restriction_rate": 50.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Llama-8B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 7.5,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Llama-8B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 0.0,
+        "semantic_error_rate": 0.0,
+        "instruction_adherence_rate": 0.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 22.5,
+        "semantic_error_rate": 60.0,
+        "instruction_adherence_rate": 5.0,
+        "operational_restriction_rate": 0.0
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Qwen-Coder-14B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 5.0,
+        "semantic_error_rate": 87.5,
+        "instruction_adherence_rate": 22.5,
+        "operational_restriction_rate": 22.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "goal",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 82.5,
+        "instruction_adherence_rate": 10.0,
+        "operational_restriction_rate": 2.5
+    },
+    {
+        "scenario": "teladoc",
+        "model": "Qwen-Coder-7B",
+        "prompt_type": "workflow",
+        "total_traces": 40,
+        "syntax_error_rate": 2.5,
+        "semantic_error_rate": 40.0,
+        "instruction_adherence_rate": 12.5,
+        "operational_restriction_rate": 52.5
+    }
+]

@@ -1,0 +1,37 @@
+# Configuration for the Bank Manager trace generation task
+
+# Environment settings define where to save the output files.
+env:
+  trace_save_path: "./generated_traces/bank_manager"
+  trace_log_path: "./generated_traces/bank_manager_logs"
+
+# Generation settings control the parameters of the trace itself.
+generation_config:
+
+  # The number of traces to attempt to generate in a single run.
+  num_traces_to_generate: 300
+
+  # The desired length of the trace (number of API calls).
+  num_of_apis: 8
+  
+  # Use coverage-guided selection to create more diverse traces.
+  enable_coverage: true
+
+  # The trace_config defines the parameters for the initial state of the system.
+  trace_config:
+    # The number of bank accounts to create on the "server" at the start.
+    init_account_num_range: [3, 3]
+    
+    # The number of bill payees to create on the "server" at the start.
+    init_payee_num_range: [4, 4]
+    
+    # The number of initial local variables for the "user" (e.g., knowledge
+    # of an "account_type" to start the search).
+    init_local_var_num_range: [6, 6]
+
+policy_file: "ltl_generator/results/psd2/2_final_policies.json"
+api_doc_file: "utils/API_docs/ToolEmu/BankManager/doc.json"
+app_description: "An online banking application for managing accounts, paying bills, and transferring funds, governed by financial regulations."
+agent_config: 
+  max_iterations: 3
+  model_type: "gpt-5-mini"

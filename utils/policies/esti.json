@@ -1,0 +1,1125 @@
+[
+    {
+        "definition": [
+            "authentication mechanism: method used to prove the authenticity of an entity",
+            "authentication value: individual value of an attribute used by an authentication mechanism",
+            "factory default: state of the device after factory reset or after final production/assembly",
+            "unique per device: unique for each individual device of a given product class or type",
+            "user: natural person or organization"
+        ],
+        "scope": "Where passwords are used to authenticate users against the device or for machine-to-machine authentication, and in any state other than the factory default",
+        "policy_description": "all consumer IoT device passwords shall be unique per device or defined by the user.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "authentication mechanism: method used to prove the authenticity of an entity",
+            "best practice cryptography: cryptography that is suitable for the corresponding use case and has no indications of a feasible attack with current readily available techniques"
+        ],
+        "scope": "None",
+        "policy_description": "Authentication mechanisms used to authenticate users against the consumer IoT device or used for machine-to-machine authentication shall use best practice cryptography, appropriate to the properties of the technology, operating environment, risk and usage.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "administrator: user who has the highest-privilege level possible for a user of the device, which can mean they are able to change any configuration related to the intended functionality",
+            "authentication value: individual value of an attribute used by an authentication mechanism",
+            "user: natural person or organization"
+        ],
+        "scope": "Where a user can authenticate against a consumer IoT device",
+        "policy_description": "the consumer IoT device shall provide to the user or an administrator a simple mechanism to change the authentication value used.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The consumer IoT device shall have a mechanism available which makes successful brute-force attacks on authentication mechanisms via network interfaces impracticable unless the device has a resource constraint determined by the use case that prevents the implementation.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)",
+            "vulnerability management process: course of action in which an organization addresses and remediates a disclosed vulnerability"
+        ],
+        "scope": "None",
+        "policy_description": "The manufacturer shall make a vulnerability disclosure policy publicly available. This policy shall include, at a minimum:\n- contact information for the reporting of issues; and\n- timelines for initial acknowledgement of receipt of a vulnerability report; and\n- timelines for when the person who reported the issue will receive status updates until the resolution of the reported issues.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "defined support period: minimum length of time, expressed as a period or by an end-date, for which a manufacturer will provide security updates",
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)"
+        ],
+        "scope": "None",
+        "policy_description": "Manufacturers should continually monitor for, identify and rectify security vulnerabilities within consumer IoT products they sell, produce, have produced and associated services they operate during the defined support period.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device shall have a secure update mechanism unless the device has a resource constraint determined by the use case that prevents the implementation.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "best practice cryptography: cryptography that is suitable for the corresponding use case and has no indications of a feasible attack with current readily available techniques"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device shall use best practice cryptography to facilitate secure update mechanisms.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device should verify the authenticity and integrity of software updates.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "Where updates are delivered over a network interface",
+        "policy_description": "the consumer IoT device shall verify the authenticity and integrity of each update via a trust relationship.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "defined support period: minimum length of time, expressed as a period or by an end-date, for which a manufacturer will provide security updates",
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)",
+            "user: natural person or organization"
+        ],
+        "scope": "None",
+        "policy_description": "The manufacturer shall publish, in an accessible way that is clear and transparent to the user, the defined support period.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "critical security parameter: security-related confidential information whose disclosure or modification can compromise the security of the device",
+            "public security parameter: security-related public information whose modification can compromise the security of the device",
+            "sensitive security parameters: critical security parameters and public security parameters"
+        ],
+        "scope": "None",
+        "policy_description": "Sensitive security parameters in persistent storage shall be stored securely by the consumer IoT device.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "critical security parameter: security-related confidential information whose disclosure or modification can compromise the security of the device"
+        ],
+        "scope": "None",
+        "policy_description": "Hard-coded critical security parameters in consumer IoT device software source code shall not be used.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Any critical security parameters used for integrity and authenticity checks of software updates and for protection of communication with associated services in consumer IoT device software shall be unique per device and shall be produced with a mechanism that reduces the risk of automated attacks against classes of consumer IoT devices.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "best practice cryptography: cryptography that is suitable for the corresponding use case and has no indications of a feasible attack with current readily available techniques"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device shall use best practice cryptography to communicate securely.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device should use reviewed or evaluated implementations to deliver network and security functionalities, particularly in the field of cryptography.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "in the initialized state",
+        "policy_description": "Access to consumer IoT device functionality via a network interface in the initialized state should only be possible after authentication on that interface.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Consumer IoT device functionality that allows security-relevant changes in configuration via a network interface shall only be accessible after authentication.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "critical security parameter: security-related confidential information whose disclosure or modification can compromise the security of the device"
+        ],
+        "scope": "None",
+        "policy_description": "Critical security parameters should be encrypted in transit, with such encryption appropriate to the properties of the technology, risk and usage.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The consumer IoT device shall protect the confidentiality of critical security parameters that are communicated via remotely accessible network interfaces.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "critical security parameter: security-related confidential information whose disclosure or modification can compromise the security of the device",
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)"
+        ],
+        "scope": "None",
+        "policy_description": "The manufacturer shall follow secure management processes for critical security parameters that relate to the consumer IoT device and for the entire lifecycle of the critical security parameters.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "All unused network interfaces and all unused logical interfaces that are accessible through a network interface shall be disabled.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "In the initialized state",
+        "policy_description": "the network interfaces of the consumer IoT device shall minimize the unauthenticated disclosure of security-relevant information.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "debug interface: physical interface used by the manufacturer to communicate with the device during development or to perform triage of issues with the device and that is not used as part of the consumer-facing functionality"
+        ],
+        "scope": "None",
+        "policy_description": "Debug interfaces shall be disabled or protected via a best practice authentication or access control mechanism.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)",
+            "software service: software component of a device that is used to support functionality"
+        ],
+        "scope": "None",
+        "policy_description": "The manufacturer should only enable software services that are used or required for the intended use or operation of the consumer IoT device.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "Code should be minimized to the functionality necessary for the consumer IoT device to operate.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "Software should run with least necessary privileges, taking account of both security and functionality.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "manufacturer: relevant economic operator in the supply chain (including the device manufacturer)"
+        ],
+        "scope": "None",
+        "policy_description": "The manufacturer should follow secure development processes for software deployed on the consumer IoT device.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "The consumer IoT device should verify its software using secure boot mechanisms.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "administrator: user who has the highest-privilege level possible for a user of the device, which can mean they are able to change any configuration related to the intended functionality",
+            "user: natural person or organization"
+        ],
+        "scope": "If an unauthorized change is detected to the software",
+        "policy_description": "the consumer IoT device should alert the user and/or administrator to the issue and should not connect to wider networks than those necessary to perform the alerting function.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The confidentiality of personal data transiting between the consumer IoT device and associated services should be protected with best practice cryptography, appropriate to the properties of the technology, operating environment, risk and usage.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The confidentiality of sensitive personal data communicated between the consumer IoT device and associated services shall be protected with best practice cryptography, appropriate to the properties of the technology, operating environment, risk and usage.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "user: natural person or organization"
+        ],
+        "scope": "None",
+        "policy_description": "All external sensing capabilities of the consumer IoT device shall be documented in an accessible way that is clear and transparent for the user.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "None",
+        "policy_description": "Consumer IoT devices should remain operating and locally functional in the case of a loss of network access and should recover cleanly in the case of restoration of a loss of power.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "telemetry data: data from a device that provide information related to the usage of that device which could help the manufacturer to identify security-related issues"
+        ],
+        "scope": "If telemetry data is collected from consumer IoT products, such as usage and measurement data",
+        "policy_description": "it should be examined for security anomalies.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "user: natural person or organization"
+        ],
+        "scope": "None",
+        "policy_description": "Users shall be provided with functionality such that all their user data can be erased from the consumer IoT device in a simple manner.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The consumer should be provided with functionality on the consumer IoT device such that personal data can be deleted from associated services in a simple manner.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Users should be given clear instructions on how to delete and where possible to erase their personal data from the device and associated services.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Data input at application layer to the device via user interfaces shall be validated by the device regarding unexpected data input to prevent system manipulations and failures.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Data input at application layer to the device via network interfaces shall be validated by the device regarding unexpected data input to prevent system manipulations and failures.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "The manufacturer shall provide consumers with clear and transparent information about what personal data is processed and for what purposes, by whom, and for how long, for each consumer IoT device and associated service.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "consumer: natural person who is acting for purposes that are outside her/his trade, business, craft or profession",
+            "personal data: any information relating to an identified or identifiable natural person"
+        ],
+        "scope": "Where personal data will be processed on the basis of consumers' consent",
+        "policy_description": "the consumer IoT device shall provide a means to acquire this consent in a valid way.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "consumer: natural person who is acting for purposes that are outside her/his trade, business, craft or profession",
+            "personal data: any information relating to an identified or identifiable natural person"
+        ],
+        "scope": "Where personal data will be processed on the basis of consumers' consent",
+        "policy_description": "the consumer IoT device shall provide a means to withdraw this consent at any time.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "consumer: natural person who is acting for purposes that are outside her/his trade, business, craft or profession",
+            "personal data: any information relating to an identified or identifiable natural person"
+        ],
+        "scope": "Where personal data will be processed on the basis of consumers' consent",
+        "policy_description": "the consumer IoT device shall provide a means of storing information about this consent.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "personal data: any information relating to an identified or identifiable natural person",
+            "telemetry data: data from a device that provide information related to the usage of that device which could help the manufacturer to identify security-related issues"
+        ],
+        "scope": "If telemetry data is collected from consumer IoT products",
+        "policy_description": "the processing of personal data should be limited to that which is necessary for the intended functionality identified in provision 6-5.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "consumer: natural person who is acting for purposes that are outside her/his trade, business, craft or profession",
+            "telemetry data: data from a device that provide information related to the usage of that device which could help the manufacturer to identify security-related issues"
+        ],
+        "scope": "If telemetry data is collected from consumer IoT products",
+        "policy_description": "consumers shall be provided with information on what telemetry data is collected, how it is being used, by whom, and for what purposes.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "None",
+        "policy_description": "Data stored and processed on a consumer IoT device, or made available to an associated service by the consumer IoT device, for purposes identified in provision 6-1 shall be limited to that which is necessary for the purpose for which it is being collected or processed, and deleted once no longer necessary for any of the purposes identified.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [
+            "None"
+        ],
+        "scope": "When the purpose of data collection from consumer IoT devices, or processing on the consumer IoT device, is solely to compute an aggregate result",
+        "policy_description": "the data collected should be the minimum required to compute the aggregate, the aggregation should happen as early as possible, and the retention of both collected data and the resulting aggregate should be minimized.",
+        "reference": ["ESTI"]
+    },
+    {
+        "definition": [],
+        "scope": "For any reuse or distribution",
+        "policy_description": "For any reuse or distribution, you must clearly communicate the license terms of this work to others.",
+        "reference": [
+            "source: ETSI 13"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Components that serve, modify, or validate HTTP traffic, such as Web Application Firewalls (WAFs), load balancers, or proxies",
+        "policy_description": "These components should be considered for requirements related to cached responses, rate limiting, or restricting incoming and outgoing connections based on source and destination.",
+        "reference": [
+            "source: ETSI 63",
+            "source: ETSI 64"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "All other considerations, such as functional aspects, code style, or policy requirements",
+        "policy_description": "All other considerations, such as functional aspects, code style, or policy requirements, are out of scope.",
+        "reference": [
+            "source: ETSI 71"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "ASVS 5.0",
+        "policy_description": "In other words, recommendations, whether they are just one of many possible options to solve a problem or code style considerations, do not satisfy the definition to be a requirement.",
+        "reference": [
+            "source: ETSI 85"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Each ASVS level",
+        "policy_description": "Each ASVS level indicates the security requirements that are required to achieve from that level, with the higher remaining level requirements as recommendations.",
+        "reference": [
+            "source: ETSI 115"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 1",
+        "policy_description": "This level contains the minimum requirements to consider when securing an application and represents a critical starting point.",
+        "reference": [
+            "source: ETSI 126"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 2",
+        "policy_description": "Most applications should be striving to achieve this level of security.",
+        "reference": [
+            "source: ETSI 133"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 3",
+        "policy_description": "This level should be the goal for applications looking to demonstrate the highest levels of security and provides the final ~30% of requirements to comply with.",
+        "reference": [
+            "source: ETSI 138"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Rather than the ASVS prescriptively stating what level an application should be at, an organization should analyze its risks and decide what level it believes it should be at, depending on the sensitivity of the application and of course, the expectations of the application’s users.",
+        "reference": [
+            "source: ETSI 142"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Additionally, organizations are strongly encouraged to create an organization- or domain-specific fork that adjusts requirements based on the specific characteristics and risk levels of their applications.",
+        "reference": [
+            "source: ETSI 162"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "forks",
+        "policy_description": "However, it is important to maintain traceability so that passing requirement 4.1.1 means the same across all versions.",
+        "reference": [
+            "source: ETSI 163"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Ideally, each organization should create its own tailored ASVS, omitting irrelevant sections (e.g., GraphQL, WebSockets, SOAP, if unused).",
+        "reference": [
+            "source: ETSI 164"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "documents, reports, or tools",
+        "policy_description": "Since the identifiers may change between versions of the standard, it is preferable for other documents, reports, or tools to use the following format: v<version>-<chapter>.<section>.<requirement>, where: ‘version’ is the ASVS version tag.",
+        "reference": [
+            "source: ETSI 173"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "format: v<version>-<chapter>.<section>.<requirement>",
+        "policy_description": "Note: The v preceding the version number in the format should always be lowercase.",
+        "reference": [
+            "source: ETSI 176"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Identifiers without v<version> element",
+        "policy_description": "If identifiers are used without including the v<version> element then they should be assumed to refer to the latest Application Security Verification Standard content.",
+        "reference": [
+            "source: ETSI 177"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "writers or developers",
+        "policy_description": "As the standard grows and changes this becomes problematic, which is why writers or developers should include the version element.",
+        "reference": [
+            "source: ETSI 178"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Forking",
+        "policy_description": "Forking should start with ASVS Level 1 as a baseline, advancing to Levels 2 or 3 based on the application’s risk.",
+        "reference": [
+            "source: ETSI 184"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "prganizations",
+        "policy_description": "Whilst the ASVS can be the base, prganizations should prepare their own specific guidance which is clear and unified and ideally be prepared based on guidance from security engineers or security architects.",
+        "reference": [
+            "source: ETSI 195"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "As an extension to this, organizations are encouraged wherever possible to prepare approved security mechanisms and libraries that can be referenced in the guidance and used by developers.",
+        "reference": [
+            "source: ETSI 196"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations are strongly encouraged to look deeply at their unique risk characteristics based on the nature of their business, and based upon that risk and business requirements determine the appropriate ASVS level.",
+        "reference": [
+            "source: ETSI 213"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "Any assurance, trust mark, or certification claiming ASVS compliance is not officially endorsed by OWASP, so organizations should be cautious of third-party claims of ASVS certification.",
+        "reference": [
+            "source: ETSI 217"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations may offer assurance services, provided they do not claim official OWASP certification.",
+        "reference": [
+            "source: ETSI 218"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "ASVS certification report",
+        "policy_description": "However, an ASVS certification report should include scope, a summary of all requirements checked, the requirements where execptions were noted, and guidance on resolving issues.",
+        "reference": [
+            "source: ETSI 224"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "ASVS certification report",
+        "policy_description": "Some requirements may be non-applicable (e.g., session management in stateless APIs), and this must be noted in the report.",
+        "reference": [
+            "source: ETSI 225"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The verifier",
+        "policy_description": "The verifier should make the scope of the verification clear including which Level the organization is attempting to achieve and which requirements were included.",
+        "reference": [
+            "source: ETSI 228"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The verifier",
+        "policy_description": "They should also provide an opinion on the rationale of excluding the requirements which haven’t been implemented.",
+        "reference": [
+            "source: ETSI 230"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Certifying organizations",
+        "policy_description": "Certifying organizations can choose their testing methods but should disclose them in the report and this should ideally be repeatable.",
+        "reference": [
+            "source: ETSI 232"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Merely running an automated tool without thorough testing",
+        "policy_description": "Merely running an automated tool without thorough testing is insufficient for certification, as each requirement must be verifiably tested.",
+        "reference": [
+            "source: ETSI 238"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "“black box” (no documentation and no source) testing",
+        "policy_description": "Whilst L1 in version 4.0 was optimized for “black box” (no documentation and no source) testing to occur, even then the standard was clear that it is not an effective assurance activity and should be actively discouraged.",
+        "reference": [
+            "source: ETSI 251"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "penetration testing",
+        "policy_description": "It is strongly encouraged to perform documentation or source code-led (hybrid) penetration testing, which have full access to the application developers and the application’s documentation, rather than traditional penetration tests.",
+        "reference": [
+            "source: ETSI 253"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "Therefore, organizations are encouraged to achieve the level that they feel like they should be achieving based on their maturity and the message they want to send to their users.",
+        "reference": [
+            "source: ETSI 323"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "modern web applications",
+        "policy_description": "For modern web applications, it is always best to use safer APIs, such as parameterized queries, auto-escaping, or templating frameworks.",
+        "reference": [
+            "source: ETSI 328"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "If safer APIs are not used",
+        "policy_description": "Otherwise, carefully performed output encoding, escaping, or sanitization becomes critical to the application’s security.",
+        "reference": [
+            "source: ETSI 329"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "deserialization mechanisms",
+        "policy_description": "For each mechanism in use, careful due diligence should be performed.",
+        "reference": [
+            "source: ETSI 359"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "JSON Schema validation",
+        "policy_description": "When using JSON Schema validation, ensure there are no gaps with the guidance in the requirements below.",
+        "reference": [
+            "source: ETSI 394"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "JSON Schema validation libraries",
+        "policy_description": "Any JSON Schema validation libraries in use should also be monitored and updated if necessary once the standard is formalized.",
+        "reference": [
+            "source: ETSI 395"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "DTD validation",
+        "policy_description": "DTD validation should not be used, and framework DTD evaluation should be disabled, to avoid issues with XXE attacks against DTDs.",
+        "reference": [
+            "source: ETSI 396"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "L2 applications",
+        "policy_description": "L2 applications must force the use of multi-factor authentication (MFA).",
+        "reference": [
+            "source: ETSI 522"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "L3 applications",
+        "policy_description": "L3 applications must use hardware-based authentication, performed in an attested and trusted execution environment (TEE).",
+        "reference": [
+            "source: ETSI 523"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Unsafe out-of-band authentication mechanisms such as e-mail and VOIP",
+        "policy_description": "Unsafe out-of-band authentication mechanisms such as e-mail and VOIP are not permitted.",
+        "reference": [
+            "source: ETSI 551"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "PSTN and SMS authentication",
+        "policy_description": "PSTN and SMS authentication are currently considered to be “restricted” authentication mechanisms by NIST and should be deprecated in favor of Time based One-time Passwords (TOTPs), a cryptographic mechanism, or similar.",
+        "reference": [
+            "source: ETSI 552"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where shared or secret keys are used for cryptographic authentication",
+        "policy_description": "Where shared or secret keys are used for cryptographic authentication, these should be stored using the same mechanisms as other system secrets, as documented in the “Secret Management” section in the “Configuration” chapter.",
+        "reference": [
+            "source: ETSI 562"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations should consider integrating with existing user identities, as per the risk profile of the IdP’s strength of identity proofing.",
+        "reference": [
+            "source: ETSI 568"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "session handling",
+        "policy_description": "A risk analysis with documented security decisions related to session handling must be conducted as a prerequisite to implementation and testing.",
+        "reference": [
+            "source: ETSI 600"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "stateful or “stateless” session mechanism",
+        "policy_description": "Regardless of whether a stateful or “stateless” session mechanism is chosen, the analysis must be complete and documented to demonstrate that the selected solution is capable of satisfying all relevant security requirements.",
+        "reference": [
+            "source: ETSI 602"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Interaction with any Single Sign-on (SSO) mechanisms",
+        "policy_description": "Interaction with any Single Sign-on (SSO) mechanisms in use should also be considered.",
+        "reference": [
+            "source: ETSI 603"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Access tokens",
+        "policy_description": "Access tokens, which shall only be consumed by the RS and can either be reference tokens that are validated using introspection or self-contained tokens that are validated using some key material.",
+        "reference": [
+            "source: ETSI 710"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Refresh tokens",
+        "policy_description": "Refresh tokens, which shall only be consumed by the authorization server that issued the token.",
+        "reference": [
+            "source: ETSI 711"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OIDC ID Tokens",
+        "policy_description": "OIDC ID Tokens, which shall only be consumed by the client that triggered the authorization flow.",
+        "reference": [
+            "source: ETSI 712"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OAuth and OIDC",
+        "policy_description": "Even if RFCs are considered mature, they are updated frequently. Thus, it is important to align with the latest versions when applying the requirements in this chapter.",
+        "reference": [
+            "source: ETSI 703",
+            "source: ETSI 704"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OAuth or OIDC solution",
+        "policy_description": "Given the complexity of the area, it is vitally important for a secure OAuth or OIDC solution to use well-known industry-standard authorization servers and apply the recommended security configuration.",
+        "reference": [
+            "source: ETSI 706"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "resource server",
+        "policy_description": "To provide secure access, the resource server must: Validate the access token, according to the token format and relevant protocol specifications, e.g., JWT-validation or OAuth token introspection. If valid, enforce authorization decisions based on the information from the access token and permissions which have been granted.",
+        "reference": [
+            "source: ETSI 725",
+            "source: ETSI 726",
+            "source: ETSI 727"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "client authentication",
+        "policy_description": "For client authentication, the ‘self_signed_tls_client_auth’ method is allowed with the prerequisites required by section 2.2 of RFC 8705.",
+        "reference": [
+            "source: ETSI 733"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic assets",
+        "policy_description": "It is important to ensure that all cryptographic assets are regularly discovered, inventoried, and assessed.",
+        "reference": [
+            "source: ETSI 787"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic component",
+        "policy_description": "Organizations must ensure that each cryptographic component is selected based on peer-reviewed evidence and practical security testing.",
+        "reference": [
+            "source: ETSI 796"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "TLS configuration",
+        "policy_description": "Up-to-date tools should be used to review TLS configuration on an ongoing basis.",
+        "reference": [
+            "source: ETSI 835"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "TLS certificates",
+        "policy_description": "Proper protection, management, and the use of separate TLS certificates in different environments should be employed if possible.",
+        "reference": [
+            "source: ETSI 837"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "configuration to interact securely with these components",
+        "policy_description": "In either case, it is necessary to configure the application to interact securely with these components and, if required, protect that configuration.",
+        "reference": [
+            "source: ETSI 864"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Production configurations",
+        "policy_description": "Production configurations should be hardened to avoid disclosing unnecessary data.",
+        "reference": [
+            "source: ETSI 872"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "determining what is “abnormal”",
+        "policy_description": "Each system’s requirements are likely to be very different, so determining what is “abnormal” must consider the threat model and business risk.",
+        "reference": [
+            "source: ETSI 885"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "privacy regulations and laws",
+        "policy_description": "Please consult local laws and regulations, and consult a qualified privacy specialist or lawyer as required.",
+        "reference": [
+            "source: ETSI 892"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where field access depends on a user’s permissions",
+        "policy_description": "Where field access depends on a user’s permissions, this should be considered in the context of the field-level access control requirement in the Authorization chapter.",
+        "reference": [
+            "source: ETSI 937"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Logs",
+        "policy_description": "Logs should not include sensitive personal data unless legally required, and any logged data must be protected as a high-value asset.",
+        "reference": [
+            "source: ETSI 953"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Logging",
+        "policy_description": "Logging must not compromise privacy or system security.",
+        "reference": [
+            "source: ETSI 954"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Applications",
+        "policy_description": "Applications must also fail securely, avoiding unnecessary disclosure or disruption.",
+        "reference": [
+            "source: ETSI 954"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "logging sensitive data",
+        "policy_description": "Therefore, it is critical to log only what is necessary and to treat log data with the same care as other sensitive assets.",
+        "reference": [
+            "source: ETSI 964"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Certain languages, (including Swift, Go, and through common design practice, many functional languages,) do not support exceptions or last-resort event handlers",
+        "policy_description": "In this case, architects and developers should use a pattern, language, or framework-friendly way to ensure that applications can securely handle exceptional, unexpected, or security-related events.",
+        "reference": [
+            "source: ETSI 982",
+            "source: ETSI 983"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "In particular, it is necessary to implement protections against flood attacks such as rate limiting, validating timestamps, using synchronized clocks to match real-time intervals, and managing buffers to prevent overflow and maintain proper timing.",
+        "reference": [
+            "source: ETSI 1016"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "If packets for a particular media session arrive too quickly, excess packets should be dropped.",
+        "reference": [
+            "source: ETSI 1017"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "It is also important to protect the system from malformed packets by implementing input validation, safely handling integer overflows, preventing buffer overflows, and employing other robust error-handling techniques.",
+        "reference": [
+            "source: ETSI 1018"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Disallowed mechanisms (D)",
+        "policy_description": "Disallowed mechanisms (D) must not be used because they are currently considered broken or do not provide sufficient security.",
+        "reference": [
+            "source: ETSI 1200"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic assets, such as algorithms, keys, and certificates",
+        "policy_description": "It is important to ensure that all cryptographic assets, such as algorithms, keys, and certificates, are regularly discovered, inventoried, and assessed.",
+        "reference": [
+            "source: ETSI 1206"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 3",
+        "policy_description": "For Level 3, this should include the use of static and dynamic scanning to discover the use of cryptography in an application.",
+        "reference": [
+            "source: ETSI 1207"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "HMAC-DRBG or Hash-DRBG",
+        "policy_description": "The underlying hash function used with HMAC-DRBG or Hash-DRBG must be approved for this usage.",
+        "reference": [
+            "source: ETSI 1224"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Many modes of operations, such as Electronic codebook (ECB)",
+        "policy_description": "Many modes of operations, such as Electronic codebook (ECB), are insecure and must not be used.",
+        "reference": [
+            "source: ETSI 1231"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Galois/Counter Mode (GCM) and Counter with cipher block chaining message authentication code (CCM) modes of operations",
+        "policy_description": "The Galois/Counter Mode (GCM) and Counter with cipher block chaining message authentication code (CCM) modes of operations provide authenticated encryption and should be used in modern applications.",
+        "reference": [
+            "source: ETSI 1232"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "All encrypted messages",
+        "policy_description": "All encrypted messages must be authenticated.",
+        "reference": [
+            "source: ETSI 1236"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "ANY use of CBC mode",
+        "policy_description": "For ANY use of CBC mode there MUST be an associated hashing MAC algorithm to validate the message.",
+        "reference": [
+            "source: ETSI 1236"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "CBC mode",
+        "policy_description": "In general, this MUST be applied in the Encrypt-Then-Hash method (but TLS 1.2 uses Hash-Then-Encrypt instead). If this cannot be guaranteed, then CBC MUST NOT be used.",
+        "reference": [
+            "source: ETSI 1237",
+            "source: ETSI 1238"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "CBC",
+        "policy_description": "If CBC is used, it shall be guaranteed that the verification of the padding is performed in constant time.",
+        "reference": [
+            "source: ETSI 1240"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "key wrapping",
+        "policy_description": "Specifically, AES-256 MUST be used for key wrapping, following NIST SP 800-38F and considering forward-looking provisions against the quantum threat.",
+        "reference": [
+            "source: ETSI 1251"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "AES-192 and AES-128",
+        "policy_description": "AES-192 and AES-128 MAY be used if the use case demands it, but its motivation MUST be documented in the entity’s cryptography inventory.",
+        "reference": [
+            "source: ETSI 1254"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "encrypted data",
+        "policy_description": "With the exception of disk encryption, encrypted data must be protected against unauthorized modification using some form of authenticated encryption (AE) scheme, usually using an authenticated encryption with associated data (AEAD) scheme.",
+        "reference": [
+            "source: ETSI 1256"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The application",
+        "policy_description": "The application should preferably use an approved AEAD scheme.",
+        "reference": [
+            "source: ETSI 1257"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Hash function with less than 254 bit of output",
+        "policy_description": "Hash function with less than 254 bit of output have insufficient collision resistancea and must not be used for digital signature or other applications requiring collision resistance.",
+        "reference": [
+            "source: ETSI 1266"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Hash function with less than 254 bit of output",
+        "policy_description": "For other usages, they might be used for compatibility and verification ONLY with legacy systems but must not be used in new designs.",
+        "reference": [
+            "source: ETSI 1267"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "secure password hashing",
+        "policy_description": "For secure password hashing, dedicated hash functions must be used.",
+        "reference": [
+            "source: ETSI 1270"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Key Exchange schemes",
+        "policy_description": "A security strength of 112 bits or above MUST be ensured for all Key Exchange schemes, and their implementation MUST follow the parameter choices in the following table.",
+        "reference": [
+            "source: ETSI 1282"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Any new implementation",
+        "policy_description": "Any new implementation MUST NOT use any scheme that is NOT compliant with NIST SP 800-56A & B and NIST SP 800-77.",
+        "reference": [
+            "source: ETSI 1288"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "IKEv1",
+        "policy_description": "Specifically, IKEv1 MUST NOT be used in production.",
+        "reference": [
+            "source: ETSI 1289"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Signature schemes",
+        "policy_description": "Signature schemes MUST use approved key sizes and parameters per NIST SP 800-57 Part 1.",
+        "reference": [
+            "source: ETSI 1300"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "PQC implementations",
+        "policy_description": "PQC implementations must be in line with FIPS-203/204/205 as there is minimal hardened code nor implementation reference yet.",
+        "reference": [
+            "source: ETSI 1303"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "mlkem768x25519 post-quantum hybrid TLS key agreement method",
+        "policy_description": "It may be used in cryptographic testing environments or when available within industry- or government-approved libraries.",
+        "reference": [
+            "source: ETSI 1304"
+        ]
+    }
+]

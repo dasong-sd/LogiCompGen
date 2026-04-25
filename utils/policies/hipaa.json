@@ -1,0 +1,896 @@
+[
+    {
+        "definition": [
+            "User identification is a way to identify a specific user of an information system, typically by name and/or number."
+        ],
+        "scope": "Access controls should enable authorized users to access the minimum necessary information needed to perform job functions.",
+        "policy_description": "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have been granted access rights as specified in § 164.308(a) (4) [Information Access Management].",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 3-4)"
+        ]
+    },
+    {
+        "definition": [
+            "User identification is a way to identify a specific user of an information system, typically by name and/or number."
+        ],
+        "scope": "A unique user identifier allows an entity to track specific user activity when that user is logged into an information system. It enables an entity to hold users accountable for functions performed on information systems with EPHI when logged into those systems.",
+        "policy_description": "Assign a unique name and/or number for identifying and tracking user identity.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 4)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Covered entities must determine the types of situations that would require emergency access to an information system or application that contains EPHI.",
+        "policy_description": "Establish (and implement as needed) procedures for obtaining necessary electronic protected health information during an emergency.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 5)"
+        ]
+    },
+    {
+        "definition": [
+            "Automatic logoff is an effective way to prevent unauthorized users from accessing EPHI on a workstation when it is left unattended for a period of time."
+        ],
+        "scope": "Where this implementation specification is a reasonable and appropriate safeguard for a covered entity...",
+        "policy_description": "Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 6)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where this implementation specification is a reasonable and appropriate safeguard for a covered entity... The goal of encryption is to protect EPHI from being accessed and viewed by unauthorized users.",
+        "policy_description": "Implement a mechanism to encrypt and decrypt electronic protected health information.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 6-7)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Most information systems provide some level of audit controls with a reporting method, such as audit reports. These controls are useful for recording and examining information system activity, especially when determining if a security violation occurred.",
+        "policy_description": "Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use electronic protected health information.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 7)"
+        ]
+    },
+    {
+        "definition": [
+            "Integrity: the property that data or information have not been altered or destroyed in an unauthorized manner."
+        ],
+        "scope": "The purpose of this standard is to establish and implement policies and procedures for protecting EPHI from being compromised regardless of the source.",
+        "policy_description": "Implement policies and procedures to protect electronic protected health information from improper alteration or destruction.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 8)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where this implementation specification is a reasonable and appropriate safeguard for a covered entity... In order to determine which electronic mechanisms to implement to ensure that EPHI is not altered or destroyed in an unauthorized manner, a covered entity must consider the various risks to the integrity of EPHI identified during the risk analysis.",
+        "policy_description": "Implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 9)"
+        ]
+    },
+    {
+        "definition": [
+            "Authentication involves confirming that users are who they claim to be."
+        ],
+        "scope": "In general, authentication ensures that a person is in fact who he or she claims to be before being allowed access to EPHI. This is accomplished by providing proof of identity.",
+        "policy_description": "Implement procedures to verify that a person or entity seeking access to electronic protected health information is the one claimed.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 9)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "A covered entity may: Require something known only to that individual, such as a password or PIN.",
+        "policy_description": "Require something known only to that individual, such as a password or PIN.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 9-10)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "A covered entity may: Require something that individuals possess, such as a smart card, a token, or a key.",
+        "policy_description": "Require something that individuals possess, such as a smart card, a token, or a key.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 10)"
+        ]
+    },
+    {
+        "definition": [
+            "Examples of biometrics include fingerprints, voice patterns, facial patterns or iris patterns."
+        ],
+        "scope": "A covered entity may: Require something unique to the individual such as a biometric.",
+        "policy_description": "Require something unique to the individual such as a biometric.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 10)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The Security Rule allows for EPHI to be sent over an electronic open network as long as it is adequately protected.",
+        "policy_description": "Implement technical security measures to guard against unauthorized access to electronic protected health information that is being transmitted over an electronic communications network.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 10-11)"
+        ]
+    },
+    {
+        "definition": [
+            "Integrity in this context is focused on making sure the EPHI is not improperly modified during transmission."
+        ],
+        "scope": "Where this implementation specification is a reasonable and appropriate safeguard for a covered entity...",
+        "policy_description": "Implement security measures to ensure that electronically transmitted electronic protected health information is not improperly modified without detection until disposed of.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 11)"
+        ]
+    },
+    {
+        "definition": [
+            "...encryption is a method of converting an original message of regular text into encoded or unreadable text that is eventually decrypted into plain comprehensible text."
+        ],
+        "scope": "Where this implementation specification is a reasonable and appropriate safeguard for a covered entity...",
+        "policy_description": "Implement a mechanism to encrypt electronic protected health information whenever deemed appropriate.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 12)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "As business practices and technology change, situations may arise where EPHI being transmitted from a covered entity would be at significant risk of being accessed by unauthorized entities.",
+        "policy_description": "Where risk analysis shows such risk to be significant, a covered entity must encrypt those transmissions under the addressable implementation specification for encryption.",
+        "reference": [
+            "HIPAA TECHSAFEGUARDS (Page 12)"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "For any reuse or distribution",
+        "policy_description": "For any reuse or distribution, you must clearly communicate the license terms of this work to others.",
+        "reference": [
+            "source: HIPAA 13"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Components that serve, modify, or validate HTTP traffic, such as Web Application Firewalls (WAFs), load balancers, or proxies",
+        "policy_description": "These components should be considered for requirements related to cached responses, rate limiting, or restricting incoming and outgoing connections based on source and destination.",
+        "reference": [
+            "source: HIPAA 63",
+            "source: HIPAA 64"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "All other considerations, such as functional aspects, code style, or policy requirements",
+        "policy_description": "All other considerations, such as functional aspects, code style, or policy requirements, are out of scope.",
+        "reference": [
+            "source: HIPAA 71"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": " 5.0",
+        "policy_description": "In other words, recommendations, whether they are just one of many possible options to solve a problem or code style considerations, do not satisfy the definition to be a requirement.",
+        "reference": [
+            "source: HIPAA 85"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Each  level",
+        "policy_description": "Each  level indicates the security requirements that are required to achieve from that level, with the higher remaining level requirements as recommendations.",
+        "reference": [
+            "source: HIPAA 115"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 1",
+        "policy_description": "This level contains the minimum requirements to consider when securing an application and represents a critical starting point.",
+        "reference": [
+            "source: HIPAA 126"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 2",
+        "policy_description": "Most applications should be striving to achieve this level of security.",
+        "reference": [
+            "source: HIPAA 133"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 3",
+        "policy_description": "This level should be the goal for applications looking to demonstrate the highest levels of security and provides the final ~30% of requirements to comply with.",
+        "reference": [
+            "source: HIPAA 138"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Rather than the  prescriptively stating what level an application should be at, an organization should analyze its risks and decide what level it believes it should be at, depending on the sensitivity of the application and of course, the expectations of the application’s users.",
+        "reference": [
+            "source: HIPAA 142"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Additionally, organizations are strongly encouraged to create an organization- or domain-specific fork that adjusts requirements based on the specific characteristics and risk levels of their applications.",
+        "reference": [
+            "source: HIPAA 162"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "forks",
+        "policy_description": "However, it is important to maintain traceability so that passing requirement 4.1.1 means the same across all versions.",
+        "reference": [
+            "source: HIPAA 163"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Ideally, each organization should create its own tailored , omitting irrelevant sections (e.g., GraphQL, WebSockets, SOAP, if unused).",
+        "reference": [
+            "source: HIPAA 164"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "documents, reports, or tools",
+        "policy_description": "Since the identifiers may change between versions of the standard, it is preferable for other documents, reports, or tools to use the following format: v<version>-<chapter>.<section>.<requirement>, where: ‘version’ is the  version tag.",
+        "reference": [
+            "source: HIPAA 173"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "format: v<version>-<chapter>.<section>.<requirement>",
+        "policy_description": "Note: The v preceding the version number in the format should always be lowercase.",
+        "reference": [
+            "source: HIPAA 176"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Identifiers without v<version> element",
+        "policy_description": "If identifiers are used without including the v<version> element then they should be assumed to refer to the latest Application Security Verification Standard content.",
+        "reference": [
+            "source: HIPAA 177"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "writers or developers",
+        "policy_description": "As the standard grows and changes this becomes problematic, which is why writers or developers should include the version element.",
+        "reference": [
+            "source: HIPAA 178"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Forking",
+        "policy_description": "Forking should start with  Level 1 as a baseline, advancing to Levels 2 or 3 based on the application’s risk.",
+        "reference": [
+            "source: HIPAA 184"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "prganizations",
+        "policy_description": "Whilst the  can be the base, prganizations should prepare their own specific guidance which is clear and unified and ideally be prepared based on guidance from security engineers or security architects.",
+        "reference": [
+            "source: HIPAA 195"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "As an extension to this, organizations are encouraged wherever possible to prepare approved security mechanisms and libraries that can be referenced in the guidance and used by developers.",
+        "reference": [
+            "source: HIPAA 196"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations are strongly encouraged to look deeply at their unique risk characteristics based on the nature of their business, and based upon that risk and business requirements determine the appropriate  level.",
+        "reference": [
+            "source: HIPAA 213"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "Any assurance, trust mark, or certification claiming  compliance is not officially endorsed by OWASP, so organizations should be cautious of third-party claims of  certification.",
+        "reference": [
+            "source: HIPAA 217"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations may offer assurance services, provided they do not claim official OWASP certification.",
+        "reference": [
+            "source: HIPAA 218"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": " certification report",
+        "policy_description": "However, an  certification report should include scope, a summary of all requirements checked, the requirements where execptions were noted, and guidance on resolving issues.",
+        "reference": [
+            "source: HIPAA 224"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": " certification report",
+        "policy_description": "Some requirements may be non-applicable (e.g., session management in stateless APIs), and this must be noted in the report.",
+        "reference": [
+            "source: HIPAA 225"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The verifier",
+        "policy_description": "The verifier should make the scope of the verification clear including which Level the organization is attempting to achieve and which requirements were included.",
+        "reference": [
+            "source: HIPAA 228"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The verifier",
+        "policy_description": "They should also provide an opinion on the rationale of excluding the requirements which haven’t been implemented.",
+        "reference": [
+            "source: HIPAA 230"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Certifying organizations",
+        "policy_description": "Certifying organizations can choose their testing methods but should disclose them in the report and this should ideally be repeatable.",
+        "reference": [
+            "source: HIPAA 232"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Merely running an automated tool without thorough testing",
+        "policy_description": "Merely running an automated tool without thorough testing is insufficient for certification, as each requirement must be verifiably tested.",
+        "reference": [
+            "source: HIPAA 238"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "“black box” (no documentation and no source) testing",
+        "policy_description": "Whilst L1 in version 4.0 was optimized for “black box” (no documentation and no source) testing to occur, even then the standard was clear that it is not an effective assurance activity and should be actively discouraged.",
+        "reference": [
+            "source: HIPAA 251"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "penetration testing",
+        "policy_description": "It is strongly encouraged to perform documentation or source code-led (hybrid) penetration testing, which have full access to the application developers and the application’s documentation, rather than traditional penetration tests.",
+        "reference": [
+            "source: HIPAA 253"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "organizations",
+        "policy_description": "Therefore, organizations are encouraged to achieve the level that they feel like they should be achieving based on their maturity and the message they want to send to their users.",
+        "reference": [
+            "source: HIPAA 323"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "modern web applications",
+        "policy_description": "For modern web applications, it is always best to use safer APIs, such as parameterized queries, auto-escaping, or templating frameworks.",
+        "reference": [
+            "source: HIPAA 328"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "If safer APIs are not used",
+        "policy_description": "Otherwise, carefully performed output encoding, escaping, or sanitization becomes critical to the application’s security.",
+        "reference": [
+            "source: HIPAA 329"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "deserialization mechanisms",
+        "policy_description": "For each mechanism in use, careful due diligence should be performed.",
+        "reference": [
+            "source: HIPAA 359"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "JSON Schema validation",
+        "policy_description": "When using JSON Schema validation, ensure there are no gaps with the guidance in the requirements below.",
+        "reference": [
+            "source: HIPAA 394"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "JSON Schema validation libraries",
+        "policy_description": "Any JSON Schema validation libraries in use should also be monitored and updated if necessary once the standard is formalized.",
+        "reference": [
+            "source: HIPAA 395"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "DTD validation",
+        "policy_description": "DTD validation should not be used, and framework DTD evaluation should be disabled, to avoid issues with XXE attacks against DTDs.",
+        "reference": [
+            "source: HIPAA 396"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "L2 applications",
+        "policy_description": "L2 applications must force the use of multi-factor authentication (MFA).",
+        "reference": [
+            "source: HIPAA 522"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "L3 applications",
+        "policy_description": "L3 applications must use hardware-based authentication, performed in an attested and trusted execution environment (TEE).",
+        "reference": [
+            "source: HIPAA 523"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Unsafe out-of-band authentication mechanisms such as e-mail and VOIP",
+        "policy_description": "Unsafe out-of-band authentication mechanisms such as e-mail and VOIP are not permitted.",
+        "reference": [
+            "source: HIPAA 551"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "PSTN and SMS authentication",
+        "policy_description": "PSTN and SMS authentication are currently considered to be “restricted” authentication mechanisms by NIST and should be deprecated in favor of Time based One-time Passwords (TOTPs), a cryptographic mechanism, or similar.",
+        "reference": [
+            "source: HIPAA 552"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where shared or secret keys are used for cryptographic authentication",
+        "policy_description": "Where shared or secret keys are used for cryptographic authentication, these should be stored using the same mechanisms as other system secrets, as documented in the “Secret Management” section in the “Configuration” chapter.",
+        "reference": [
+            "source: HIPAA 562"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Organizations",
+        "policy_description": "Organizations should consider integrating with existing user identities, as per the risk profile of the IdP’s strength of identity proofing.",
+        "reference": [
+            "source: HIPAA 568"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "session handling",
+        "policy_description": "A risk analysis with documented security decisions related to session handling must be conducted as a prerequisite to implementation and testing.",
+        "reference": [
+            "source: HIPAA 600"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "stateful or “stateless” session mechanism",
+        "policy_description": "Regardless of whether a stateful or “stateless” session mechanism is chosen, the analysis must be complete and documented to demonstrate that the selected solution is capable of satisfying all relevant security requirements.",
+        "reference": [
+            "source: HIPAA 602"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Interaction with any Single Sign-on (SSO) mechanisms",
+        "policy_description": "Interaction with any Single Sign-on (SSO) mechanisms in use should also be considered.",
+        "reference": [
+            "source: HIPAA 603"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Access tokens",
+        "policy_description": "Access tokens, which shall only be consumed by the RS and can either be reference tokens that are validated using introspection or self-contained tokens that are validated using some key material.",
+        "reference": [
+            "source: HIPAA 710"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Refresh tokens",
+        "policy_description": "Refresh tokens, which shall only be consumed by the authorization server that issued the token.",
+        "reference": [
+            "source: HIPAA 711"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OIDC ID Tokens",
+        "policy_description": "OIDC ID Tokens, which shall only be consumed by the client that triggered the authorization flow.",
+        "reference": [
+            "source: HIPAA 712"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OAuth and OIDC",
+        "policy_description": "Even if RFCs are considered mature, they are updated frequently. Thus, it is important to align with the latest versions when applying the requirements in this chapter.",
+        "reference": [
+            "source: HIPAA 703",
+            "source: HIPAA 704"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "OAuth or OIDC solution",
+        "policy_description": "Given the complexity of the area, it is vitally important for a secure OAuth or OIDC solution to use well-known industry-standard authorization servers and apply the recommended security configuration.",
+        "reference": [
+            "source: HIPAA 706"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "resource server",
+        "policy_description": "To provide secure access, the resource server must: Validate the access token, according to the token format and relevant protocol specifications, e.g., JWT-validation or OAuth token introspection. If valid, enforce authorization decisions based on the information from the access token and permissions which have been granted.",
+        "reference": [
+            "source: HIPAA 725",
+            "source: HIPAA 726",
+            "source: HIPAA 727"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "client authentication",
+        "policy_description": "For client authentication, the ‘self_signed_tls_client_auth’ method is allowed with the prerequisites required by section 2.2 of RFC 8705.",
+        "reference": [
+            "source: HIPAA 733"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic assets",
+        "policy_description": "It is important to ensure that all cryptographic assets are regularly discovered, inventoried, and assessed.",
+        "reference": [
+            "source: HIPAA 787"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic component",
+        "policy_description": "Organizations must ensure that each cryptographic component is selected based on peer-reviewed evidence and practical security testing.",
+        "reference": [
+            "source: HIPAA 796"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "TLS configuration",
+        "policy_description": "Up-to-date tools should be used to review TLS configuration on an ongoing basis.",
+        "reference": [
+            "source: HIPAA 835"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "TLS certificates",
+        "policy_description": "Proper protection, management, and the use of separate TLS certificates in different environments should be employed if possible.",
+        "reference": [
+            "source: HIPAA 837"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "configuration to interact securely with these components",
+        "policy_description": "In either case, it is necessary to configure the application to interact securely with these components and, if required, protect that configuration.",
+        "reference": [
+            "source: HIPAA 864"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Production configurations",
+        "policy_description": "Production configurations should be hardened to avoid disclosing unnecessary data.",
+        "reference": [
+            "source: HIPAA 872"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "determining what is “abnormal”",
+        "policy_description": "Each system’s requirements are likely to be very different, so determining what is “abnormal” must consider the threat model and business risk.",
+        "reference": [
+            "source: HIPAA 885"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "privacy regulations and laws",
+        "policy_description": "Please consult local laws and regulations, and consult a qualified privacy specialist or lawyer as required.",
+        "reference": [
+            "source: HIPAA 892"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Where field access depends on a user’s permissions",
+        "policy_description": "Where field access depends on a user’s permissions, this should be considered in the context of the field-level access control requirement in the Authorization chapter.",
+        "reference": [
+            "source: HIPAA 937"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Logs",
+        "policy_description": "Logs should not include sensitive personal data unless legally required, and any logged data must be protected as a high-value asset.",
+        "reference": [
+            "source: HIPAA 953"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Logging",
+        "policy_description": "Logging must not compromise privacy or system security.",
+        "reference": [
+            "source: HIPAA 954"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Applications",
+        "policy_description": "Applications must also fail securely, avoiding unnecessary disclosure or disruption.",
+        "reference": [
+            "source: HIPAA 954"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "logging sensitive data",
+        "policy_description": "Therefore, it is critical to log only what is necessary and to treat log data with the same care as other sensitive assets.",
+        "reference": [
+            "source: HIPAA 964"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Certain languages, (including Swift, Go, and through common design practice, many functional languages,) do not support exceptions or last-resort event handlers",
+        "policy_description": "In this case, architects and developers should use a pattern, language, or framework-friendly way to ensure that applications can securely handle exceptional, unexpected, or security-related events.",
+        "reference": [
+            "source: HIPAA 982",
+            "source: HIPAA 983"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "In particular, it is necessary to implement protections against flood attacks such as rate limiting, validating timestamps, using synchronized clocks to match real-time intervals, and managing buffers to prevent overflow and maintain proper timing.",
+        "reference": [
+            "source: HIPAA 1016"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "If packets for a particular media session arrive too quickly, excess packets should be dropped.",
+        "reference": [
+            "source: HIPAA 1017"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "WebRTC media servers",
+        "policy_description": "It is also important to protect the system from malformed packets by implementing input validation, safely handling integer overflows, preventing buffer overflows, and employing other robust error-handling techniques.",
+        "reference": [
+            "source: HIPAA 1018"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Disallowed mechanisms (D)",
+        "policy_description": "Disallowed mechanisms (D) must not be used because they are currently considered broken or do not provide sufficient security.",
+        "reference": [
+            "source: HIPAA 1200"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "cryptographic assets, such as algorithms, keys, and certificates",
+        "policy_description": "It is important to ensure that all cryptographic assets, such as algorithms, keys, and certificates, are regularly discovered, inventoried, and assessed.",
+        "reference": [
+            "source: HIPAA 1206"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Level 3",
+        "policy_description": "For Level 3, this should include the use of static and dynamic scanning to discover the use of cryptography in an application.",
+        "reference": [
+            "source: HIPAA 1207"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "HMAC-DRBG or Hash-DRBG",
+        "policy_description": "The underlying hash function used with HMAC-DRBG or Hash-DRBG must be approved for this usage.",
+        "reference": [
+            "source: HIPAA 1224"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Many modes of operations, such as Electronic codebook (ECB)",
+        "policy_description": "Many modes of operations, such as Electronic codebook (ECB), are insecure and must not be used.",
+        "reference": [
+            "source: HIPAA 1231"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Galois/Counter Mode (GCM) and Counter with cipher block chaining message authentication code (CCM) modes of operations",
+        "policy_description": "The Galois/Counter Mode (GCM) and Counter with cipher block chaining message authentication code (CCM) modes of operations provide authenticated encryption and should be used in modern applications.",
+        "reference": [
+            "source: HIPAA 1232"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "All encrypted messages",
+        "policy_description": "All encrypted messages must be authenticated.",
+        "reference": [
+            "source: HIPAA 1236"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "ANY use of CBC mode",
+        "policy_description": "For ANY use of CBC mode there MUST be an associated hashing MAC algorithm to validate the message.",
+        "reference": [
+            "source: HIPAA 1236"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "CBC mode",
+        "policy_description": "In general, this MUST be applied in the Encrypt-Then-Hash method (but TLS 1.2 uses Hash-Then-Encrypt instead). If this cannot be guaranteed, then CBC MUST NOT be used.",
+        "reference": [
+            "source: HIPAA 1237",
+            "source: HIPAA 1238"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "CBC",
+        "policy_description": "If CBC is used, it shall be guaranteed that the verification of the padding is performed in constant time.",
+        "reference": [
+            "source: HIPAA 1240"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "key wrapping",
+        "policy_description": "Specifically, AES-256 MUST be used for key wrapping, following NIST SP 800-38F and considering forward-looking provisions against the quantum threat.",
+        "reference": [
+            "source: HIPAA 1251"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "AES-192 and AES-128",
+        "policy_description": "AES-192 and AES-128 MAY be used if the use case demands it, but its motivation MUST be documented in the entity’s cryptography inventory.",
+        "reference": [
+            "source: HIPAA 1254"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "encrypted data",
+        "policy_description": "With the exception of disk encryption, encrypted data must be protected against unauthorized modification using some form of authenticated encryption (AE) scheme, usually using an authenticated encryption with associated data (AEAD) scheme.",
+        "reference": [
+            "source: HIPAA 1256"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "The application",
+        "policy_description": "The application should preferably use an approved AEAD scheme.",
+        "reference": [
+            "source: HIPAA 1257"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Hash function with less than 254 bit of output",
+        "policy_description": "Hash function with less than 254 bit of output have insufficient collision resistancea and must not be used for digital signature or other applications requiring collision resistance.",
+        "reference": [
+            "source: HIPAA 1266"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Hash function with less than 254 bit of output",
+        "policy_description": "For other usages, they might be used for compatibility and verification ONLY with legacy systems but must not be used in new designs.",
+        "reference": [
+            "source: HIPAA 1267"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "secure password hashing",
+        "policy_description": "For secure password hashing, dedicated hash functions must be used.",
+        "reference": [
+            "source: HIPAA 1270"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Key Exchange schemes",
+        "policy_description": "A security strength of 112 bits or above MUST be ensured for all Key Exchange schemes, and their implementation MUST follow the parameter choices in the following table.",
+        "reference": [
+            "source: HIPAA 1282"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Any new implementation",
+        "policy_description": "Any new implementation MUST NOT use any scheme that is NOT compliant with NIST SP 800-56A & B and NIST SP 800-77.",
+        "reference": [
+            "source: HIPAA 1288"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "IKEv1",
+        "policy_description": "Specifically, IKEv1 MUST NOT be used in production.",
+        "reference": [
+            "source: HIPAA 1289"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "Signature schemes",
+        "policy_description": "Signature schemes MUST use approved key sizes and parameters per NIST SP 800-57 Part 1.",
+        "reference": [
+            "source: HIPAA 1300"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "PQC implementations",
+        "policy_description": "PQC implementations must be in line with FIPS-203/204/205 as there is minimal hardened code nor implementation reference yet.",
+        "reference": [
+            "source: HIPAA 1303"
+        ]
+    },
+    {
+        "definition": [],
+        "scope": "mlkem768x25519 post-quantum hybrid TLS key agreement method",
+        "policy_description": "It may be used in cryptographic testing environments or when available within industry- or government-approved libraries.",
+        "reference": [
+            "source: HIPAA 1304"
+        ]
+    }
+]

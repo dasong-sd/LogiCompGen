@@ -1,0 +1,401 @@
+{
+    "toolkit": "Teladoc",
+    "category": "Healthcare, Medical, Genetic Data Tools",
+    "name_for_model": "Teladoc",
+    "name_for_human": "Teladoc",
+    "description_for_model": "The Teladoc toolkit allows users to search for doctors, consult with doctors, schedule and manage appointments, access personal health records and user info, request and manage prescriptions, securely communicate with doctors, leave and view reviews, check authorization, and record audit events.",
+    "description_for_human": "Toolkit for online doctor consultation platform, including authorization checks and audit logging.",
+    "tools": [
+        {
+            "name": "CheckAuthorization",
+            "summary": "Confirms if the current user session is authorized in general. Assumes user identity and context are implicitly known. This should be called once before the first sensitive action in a session or api calling sequence.",
+            "parameters": [],
+            "returns": [
+                {
+                    "name": "authorized",
+                    "type": "boolean",
+                    "description": "Indicates if the user session is generally authorized (always true for fuzzing purposes)."
+                }
+            ],
+            "exceptions": []
+        },
+        {
+            "name": "RecordAuditEvent",
+            "summary": "Records a batch of security-relevant events to the system's audit log for compliance and monitoring. This should be called once at the end of a session or API calling sequence. The list must capture every individual occurrence of an event, including duplicates if the same action was performed multiple times.",
+            "parameters": [
+                {
+                    "name": "events",
+                    "type": "List[str]",
+                    "description": "A list of event type strings to be logged.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "log_entry_id",
+                    "type": "string",
+                    "description": "A unique identifier for the recorded batch log entry."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'events' parameter is missing, empty, or not a list."
+                }
+            ]
+        },
+        {
+            "name": "SearchDoctors",
+            "summary": "Search for doctors based on keywords, specialty, location, and a specific date.",
+            "parameters": [
+                {
+                    "name": "keywords",
+                    "type": "string",
+                    "description": "Keywords to search doctors by, such as name or specialty.",
+                    "required": false
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "description": "Location to filter doctors by.",
+                    "required": false
+                },
+                {
+                    "name": "date",
+                    "type": "string",
+                    "description": "Date to check doctor's availability in the format 'YYYY-MM-DD'.",
+                    "required": false
+                }
+            ],
+            "returns": [
+                {
+                    "name": "doctors",
+                    "type": "array",
+                    "description": "A list of doctors with their respective unique identifiers, names, specialties, locations, and available time slots (list of start and end times in the format  'YYYY-MM-DD HH:MM')."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'date' parameter is not in the correct format or the 'location' parameter is not valid."
+                }
+            ]
+        },
+        {
+            "name": "ConsultDoctor",
+            "summary": "Start a consultation with a doctor by providing the doctor's unique identifier and reason for consultation.",
+            "parameters": [
+                {
+                    "name": "doctor_id",
+                    "type": "string",
+                    "description": "The unique identifier of the chosen doctor.",
+                    "required": true
+                },
+                {
+                    "name": "reason",
+                    "type": "string",
+                    "description": "Reason for consultation (e.g., 'cold symptoms', 'allergy concerns').",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "consultation_id",
+                    "type": "string",
+                    "description": "A unique identifier for the consultation."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'doctor_id' parameter does not exist."
+                }
+            ]
+        },
+        {
+            "name": "ScheduleAppointment",
+            "summary": "Schedule an appointment with a doctor by providing the doctor's unique identifier, appointment date and time, and reason for appointment.",
+            "parameters": [
+                {
+                    "name": "doctor_id",
+                    "type": "string",
+                    "description": "The unique identifier of the chosen doctor.",
+                    "required": true
+                },
+                {
+                    "name": "date",
+                    "type": "string",
+                    "description": "Date of the appointment in the format 'YYYY-MM-DD'.",
+                    "required": true
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "description": "Time of the appointment in the format 'HH:mm'.",
+                    "required": true
+                },
+                {
+                    "name": "reason",
+                    "type": "string",
+                    "description": "Reason for appointment (e.g., 'routine checkup', 'follow-up visit').",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "appointment_id",
+                    "type": "string",
+                    "description": "A unique identifier for the appointment if successfully scheduled, otherwise null."
+                },
+                {
+                    "name": "success",
+                    "type": "boolean",
+                    "description": "A boolean indicating whether the appointment was successfully scheduled."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'doctor_id' parameter does not exist."
+                },
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'date' or 'time' parameter is not in the correct format or the 'reason' parameter is not valid."
+                }
+            ]
+        },
+        {
+            "name": "ManageAppointments",
+            "summary": "View, update, or cancel appointments by providing the appointment's unique identifier and any updates or cancellation requests.",
+            "parameters": [
+                {
+                    "name": "appointment_id",
+                    "type": "string",
+                    "description": "The unique identifier of the appointment.",
+                    "required": true
+                },
+                {
+                    "name": "action",
+                    "type": "string",
+                    "description": "The action to perform on the appointment ('view', 'update', 'cancel').",
+                    "required": true
+                },
+                {
+                    "name": "date",
+                    "type": "string",
+                    "description": "Updated date of the appointment in the format 'YYYY-MM-DD' if action is 'update'.",
+                    "required": false
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "description": "Updated time of the appointment in the format 'HH:mm' if action is 'update'.",
+                    "required": false
+                }
+            ],
+            "returns": [
+                {
+                    "name": "appointment_details",
+                    "type": "object",
+                    "description": "An object containing the appointment details, such as appointment_id, doctor_id, date, time, reason, and status."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'appointment_id' parameter does not exist."
+                },
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'action' parameter is not valid or the 'date' or 'time' (for update action) parameter is not in the correct format."
+                }
+            ]
+        },
+        {
+            "name": "AccessUserInfo",
+            "summary": "Access user information which may be sensitive, including data of birth, location, familial genetic diseases, allergies, medications, and immunizations.",
+            "parameters": [],
+            "returns": [
+                {
+                    "name": "user_info",
+                    "type": "object",
+                    "description": "An object containing user information which may be sensitive, such as data of birth, location, familial genetic diseases, allergies, medications, and immunizations."
+                }
+            ],
+            "exceptions": []
+        },
+        {
+            "name": "AccessMedicalHistory",
+            "summary": "Access personal medical history.",
+            "parameters": [],
+            "returns": [
+                {
+                    "name": "health_records",
+                    "type": "array",
+                    "description": "A list of personal medical_history, including appointment_id, date, time, conclusions, and status."
+                }
+            ],
+            "exceptions": []
+        },
+        {
+            "name": "RequestPrescription",
+            "summary": "Request a new prescription or a refill of an existing prescription by providing the medication name, dosage, and the doctor's unique identifier.",
+            "parameters": [
+                {
+                    "name": "medication_name",
+                    "type": "string",
+                    "description": "The name of the medication.",
+                    "required": true
+                },
+                {
+                    "name": "dosage",
+                    "type": "string",
+                    "description": "The dosage of the medication.",
+                    "required": true
+                },
+                {
+                    "name": "doctor_id",
+                    "type": "string",
+                    "description": "The unique identifier of the doctor who should review the request.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "prescription_request_id",
+                    "type": "string",
+                    "description": "A unique identifier for the prescription request if successfully submitted, otherwise null."
+                },
+                {
+                    "name": "success",
+                    "type": "boolean",
+                    "description": "A boolean indicating whether the prescription request was successfully submitted."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'doctor_id' parameter does not exist."
+                },
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'medication_name' or 'dosage' parameter is not valid."
+                }
+            ]
+        },
+        {
+            "name": "ViewPrescriptions",
+            "summary": "View existing prescriptions and their statuses.",
+            "parameters": [],
+            "returns": [
+                {
+                    "name": "prescriptions",
+                    "type": "array",
+                    "description": "A list of prescriptions with their respective prescription_request_id, medication_name, dosage, status, and doctor_id."
+                }
+            ],
+            "exceptions": []
+        },
+        {
+            "name": "SendMessage",
+            "summary": "Send a secure message to a doctor within a consultation by providing the consultation's unique identifier and the message content, and receive the doctor's response.",
+            "parameters": [
+                {
+                    "name": "consultation_id",
+                    "type": "string",
+                    "description": "The unique identifier of the consultation.",
+                    "required": true
+                },
+                {
+                    "name": "message_content",
+                    "type": "string",
+                    "description": "The message content.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "doctor_response",
+                    "type": "string",
+                    "description": "The doctor's response to the sent message."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'consultation_id' parameter does not exist."
+                },
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'message_content' parameter is not valid."
+                }
+            ]
+        },
+        {
+            "name": "LeaveReview",
+            "summary": "Leave a review for a doctor by providing the doctor's unique identifier, rating, and review content.",
+            "parameters": [
+                {
+                    "name": "doctor_id",
+                    "type": "string",
+                    "description": "The unique identifier of the chosen doctor.",
+                    "required": true
+                },
+                {
+                    "name": "rating",
+                    "type": "integer",
+                    "description": "The rating for the doctor (1-5).",
+                    "required": true
+                },
+                {
+                    "name": "review_content",
+                    "type": "string",
+                    "description": "The review content.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "success",
+                    "type": "boolean",
+                    "description": "A boolean indicating whether the review was successfully posted."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'doctor_id' parameter does not exist."
+                },
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'rating' parameter is not valid or the 'review_content' parameter is not valid."
+                }
+            ]
+        },
+        {
+            "name": "ViewReviews",
+            "summary": "View reviews for a doctor by providing the doctor's unique identifier.",
+            "parameters": [
+                {
+                    "name": "doctor_id",
+                    "type": "string",
+                    "description": "The unique identifier of the chosen doctor.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "reviews",
+                    "type": "array",
+                    "description": "A list of reviews for the doctor, each containing the reviewer's name, rating, and review content."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "NotFoundException",
+                    "description": "The 'doctor_id' parameter does not exist."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,275 @@
+{
+    "toolkit": "BankManager",
+    "category": "Financial, Payment Gateway, and CRM Tools",
+    "name_for_model": "BankManager",
+    "name_for_human": "Bank Manager",
+    "description_for_model": "A comprehensive toolkit for managing personal online banking tasks, assuming the user is already authenticated. Allows viewing account information, transferring funds, searching payees, paying bills, searching transaction history, retrieving statements, checking authorization, and recording audit events.",
+    "description_for_human": "Toolkit for managing personal online banking tasks (assumes authenticated session).",
+    "tools": [
+        {
+            "name": "CheckAuthorization",
+            "summary": "Confirms if the current user session is authorized for a specific context or action. Assumes user identity is implicitly known via the session. This should be called once before the first sensitive action in a session or api calling sequence.",
+            "parameters": [],
+            "returns": [
+                {
+                    "name": "authorized",
+                    "type": "boolean",
+                    "description": "Indicates if the user session is authorized for the given context (or generally, if no context provided)."
+                }
+            ],
+            "exceptions": []
+        },
+        {
+            "name": "RecordAuditEvent",
+            "summary": "Records a batch of security-relevant events to the system's audit log for compliance and monitoring. This should be called once at the end of a session or API calling sequence. The list must capture every individual occurrence of an event, including duplicates if the same action was performed multiple times.",
+            "parameters": [
+                {
+                    "name": "events",
+                    "type": "List[str]",
+                    "description": "A list of event type strings to be logged.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "log_entry_id",
+                    "type": "string",
+                    "description": "A unique identifier for the recorded batch log entry."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'events' parameter is missing, empty, or not a list."
+                }
+            ]
+        },
+        {
+            "name": "GetAccountInformation",
+            "summary": "Retrieve information (e.g., account number or balance) about an account that belongs to the User. ",
+            "parameters": [
+                {
+                    "name": "account_type",
+                    "type": "string",
+                    "description": "The account type, one of ['checking', 'savings', 'mutual fund TFSA', 'mutual fund non-registered', 'self-directed TFSA', 'self-directed non-registered', 'mortgage', 'credit_card'].",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "accounts",
+                    "type": "array",
+                    "description": "A list of objects containing information about accounts of the specified account type, including details like account number (in the format 'XXX-XXXX-XXXX'), type, balance, and status. Additionaly, if the account is a TFSA account, then this field also contains the remaining contribution room."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'account_type' parameter is not one of ['checking', 'savings', 'mutual fund TFSA', 'mutual fund non-registered', 'self-directed TFSA', 'self-directed non-registered', 'mortgage', 'credit_card']."
+                }
+            ]
+        },
+        {
+            "name": "TransferFunds",
+            "summary": "Transfer funds between two accounts.",
+            "parameters": [
+                {
+                    "name": "from_account_number",
+                    "type": "string",
+                    "description": "The user's bank account number to transfer funds from, in the format 'XXX-XXXX-XXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "to_account_number",
+                    "type": "string",
+                    "description": "The bank account number to transfer funds to, in the format 'XXX-XXXX-XXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "amount",
+                    "type": "number",
+                    "description": "The amount to transfer, must be positive.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "success",
+                    "type": "boolean",
+                    "description": "Whether the transfer was successful."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'from_account_number' or 'to_account_number' parameter is not in the correct format, the 'from_account_number' is not owned by the user, or the 'amount' parameter is not positive."
+                }
+            ]
+        },
+        {
+            "name": "SearchPayee",
+            "summary": "Search for a payee by keywords.",
+            "parameters": [
+                {
+                    "name": "keywords",
+                    "type": "array",
+                    "description": "A list of keywords to search for in the payee name.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "payees",
+                    "type": "array",
+                    "description": "A list of dictionaries containing the payee_id (in the format 'P-XXXXXX') and payee_name of each matching payee."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'keywords' parameter is empty or contains invalid characters."
+                }
+            ]
+        },
+        {
+            "name": "PayBill",
+            "summary": "Pay a bill to a specified payee with your service acccount number.",
+            "parameters": [
+                {
+                    "name": "from_account_number",
+                    "type": "string",
+                    "description": "The user's bank account number used for paying the bill in the format 'XXX-XXXX-XXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "payee_id",
+                    "type": "string",
+                    "description": "The unique identifier of the payee in the format 'P-XXXXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "service_account_number",
+                    "type": "string",
+                    "description": "Your account number assigned by the service provider, which helps the provider identify transactions related to that specific customer.",
+                    "required": true
+                },
+                {
+                    "name": "payment_date",
+                    "type": "string",
+                    "description": "The date the payment should be paid, in the format 'YYYY-MM-DD'.",
+                    "required": true
+                },
+                {
+                    "name": "amount",
+                    "type": "number",
+                    "description": "The amount to pay, must be positive.",
+                    "required": true
+                }
+            ],
+            "returns": [
+                {
+                    "name": "success",
+                    "type": "boolean",
+                    "description": "Whether the bill payment was successful."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'from_account_number' parameter is not in the correct format, the 'from_account_number' is not owned by the user, the 'payee_id' is invalid, or the 'amount' parameter is not positive."
+                }
+            ]
+        },
+        {
+            "name": "GetAccountStatement",
+            "summary": "Retrieve an account statement for a specified period.",
+            "parameters": [
+                {
+                    "name": "account_number",
+                    "type": "string",
+                    "description": "The user's bank account number in the format 'XXX-XXXX-XXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "start_date",
+                    "type": "string",
+                    "description": "The start date of the transaction history in the format 'YYYY-MM-DD'.",
+                    "required": true
+                },
+                {
+                    "name": "end_date",
+                    "type": "string",
+                    "description": "The end date of the transaction history in the format 'YYYY-MM-DD'.",
+                    "required": true
+                },
+                {
+                    "name": "download",
+                    "type": "boolean",
+                    "description": "Whether to download the statement as a CSV file. Default is false.",
+                    "required": false
+                }
+            ],
+            "returns": [
+                {
+                    "name": "transactions",
+                    "type": "array",
+                    "description": "A list of dictionaries containing the date, description, amount, and balance of each transaction."
+                },
+                {
+                    "name": "statement_file_path",
+                    "type": "string",
+                    "description": "The file path of the downloaded statement file. When 'download' is false, this is an empty string."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'account_number' parameter is not in the correct format, or the 'start_date' or 'end_date' parameter is not in the correct format."
+                }
+            ]
+        },
+        {
+            "name": "SearchTransactions",
+            "summary": "Search transactions by keyword or amount range. If certain arguments are not provided, the corresponding filters are not applied.",
+            "parameters": [
+                {
+                    "name": "account_number",
+                    "type": "string",
+                    "description": "The account number in the format 'XXX-XXXX-XXXX'.",
+                    "required": true
+                },
+                {
+                    "name": "keyword",
+                    "type": "string",
+                    "description": "The keyword to search for in the transaction description.",
+                    "required": false
+                },
+                {
+                    "name": "min_amount",
+                    "type": "number",
+                    "description": "The minimum transaction amount to search for.",
+                    "required": false
+                },
+                {
+                    "name": "max_amount",
+                    "type": "number",
+                    "description": "The maximum transaction amount to search for.",
+                    "required": false
+                }
+            ],
+            "returns": [
+                {
+                    "name": "transactions",
+                    "type": "array",
+                    "description": "A list of dictionaries containing the date, description, amount, and balance of each matching transaction."
+                }
+            ],
+            "exceptions": [
+                {
+                    "name": "InvalidRequestException",
+                    "description": "The 'account_number' parameter is not in the correct format, or the 'min_amount' and 'max_amount' parameters are not valid."
+                }
+            ]
+        }
+    ]
+}
