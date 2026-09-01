@@ -1,0 +1,162 @@
+{
+    "overall": {
+        "goal": {
+            "total": 1560,
+            "program_failure": {
+                "count": 818,
+                "rate": 52.44
+            },
+            "target_state_mismatch": {
+                "count": 201,
+                "rate": 12.88
+            },
+            "missing_follow_up": {
+                "count": 462,
+                "rate": 29.62
+            },
+            "unmet_prerequisite": {
+                "count": 154,
+                "rate": 9.87
+            }
+        },
+        "workflow": {
+            "total": 1560,
+            "program_failure": {
+                "count": 488,
+                "rate": 31.28
+            },
+            "target_state_mismatch": {
+                "count": 90,
+                "rate": 5.77
+            },
+            "missing_follow_up": {
+                "count": 572,
+                "rate": 36.67
+            },
+            "unmet_prerequisite": {
+                "count": 490,
+                "rate": 31.41
+            }
+        }
+    },
+    "by_domain": {
+        "goal": {
+            "bank_manager": {
+                "total": 520,
+                "program_failure": {
+                    "count": 275,
+                    "rate": 52.88
+                },
+                "target_state_mismatch": {
+                    "count": 41,
+                    "rate": 7.88
+                },
+                "missing_follow_up": {
+                    "count": 115,
+                    "rate": 22.12
+                },
+                "unmet_prerequisite": {
+                    "count": 40,
+                    "rate": 7.69
+                }
+            },
+            "teladoc": {
+                "total": 520,
+                "program_failure": {
+                    "count": 260,
+                    "rate": 50.0
+                },
+                "target_state_mismatch": {
+                    "count": 46,
+                    "rate": 8.85
+                },
+                "missing_follow_up": {
+                    "count": 142,
+                    "rate": 27.31
+                },
+                "unmet_prerequisite": {
+                    "count": 22,
+                    "rate": 4.23
+                }
+            },
+            "smart_lock": {
+                "total": 520,
+                "program_failure": {
+                    "count": 283,
+                    "rate": 54.42
+                },
+                "target_state_mismatch": {
+                    "count": 114,
+                    "rate": 21.92
+                },
+                "missing_follow_up": {
+                    "count": 205,
+                    "rate": 39.42
+                },
+                "unmet_prerequisite": {
+                    "count": 92,
+                    "rate": 17.69
+                }
+            }
+        },
+        "workflow": {
+            "bank_manager": {
+                "total": 520,
+                "program_failure": {
+                    "count": 78,
+                    "rate": 15.0
+                },
+                "target_state_mismatch": {
+                    "count": 17,
+                    "rate": 3.27
+                },
+                "missing_follow_up": {
+                    "count": 184,
+                    "rate": 35.38
+                },
+                "unmet_prerequisite": {
+                    "count": 145,
+                    "rate": 27.88
+                }
+            },
+            "teladoc": {
+                "total": 520,
+                "program_failure": {
+                    "count": 184,
+                    "rate": 35.38
+                },
+                "target_state_mismatch": {
+                    "count": 37,
+                    "rate": 7.12
+                },
+                "missing_follow_up": {
+                    "count": 142,
+                    "rate": 27.31
+                },
+                "unmet_prerequisite": {
+                    "count": 132,
+                    "rate": 25.38
+                }
+            },
+            "smart_lock": {
+                "total": 520,
+                "program_failure": {
+                    "count": 226,
+                    "rate": 43.46
+                },
+                "target_state_mismatch": {
+                    "count": 36,
+                    "rate": 6.92
+                },
+                "missing_follow_up": {
+                    "count": 246,
+                    "rate": 47.31
+                },
+                "unmet_prerequisite": {
+                    "count": 213,
+                    "rate": 40.96
+                }
+            }
+        }
+    }
+}

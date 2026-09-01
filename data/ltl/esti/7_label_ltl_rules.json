@@ -1,0 +1,112 @@
+{
+    "valid_ltl_rules": [
+        {
+            "source_policy": {
+                "policy_description": "Access to sensitive device functionality must only be possible after a successful authorization check.",
+                "scope": "Access Control",
+                "definition": "Refined from ESTI-POLICY-026 ('Access... should only be possible after authentication') and ESTI-POLICY-027 ('security-relevant configuration changes... must only be accessible after authentication'). Maps authentication to a verifiable 'CheckAuthorization' API call.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-026"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Ensures the core sensitive action (P1=UnlockDoor) requires a prior authorization check (P2=CheckAuthorization).",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL UnlockDoor)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Access to sensitive device functionality must only be possible after a successful authorization check.",
+                "scope": "Access Control",
+                "definition": "Refined from ESTI-POLICY-026 ('Access... should only be possible after authentication') and ESTI-POLICY-027 ('security-relevant configuration changes... must only be accessible after authentication'). Maps authentication to a verifiable 'CheckAuthorization' API call.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-026"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Consolidates multiple rules. Ensures access granting (P1=GrantGuestAccess) requires a prior authorization check (P2=CheckAuthorization).",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL GrantGuestAccess)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Access to sensitive device functionality must only be possible after a successful authorization check.",
+                "scope": "Access Control",
+                "definition": "Refined from ESTI-POLICY-026 ('Access... should only be possible after authentication') and ESTI-POLICY-027 ('security-relevant configuration changes... must only be accessible after authentication'). Maps authentication to a verifiable 'CheckAuthorization' API call.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-026"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Consolidates multiple rules. Ensures code creation (P1=GenerateTemporaryAccessCode) requires a prior authorization check (P2=CheckAuthorization).",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL GenerateTemporaryAccessCode)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Granting guest access must be preceded by an action that creates the guest.",
+                "scope": "Business Logic Sequence",
+                "definition": "Refined from ESTI-POLICY-035 ('least necessary privileges') and ESTI-POLICY-050 ('provide a means to acquire... consent'). Enforces a logical workflow: a guest must exist before permissions are granted to them.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-035 / ESTI-POLICY-050"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+            "api_mapping_analysis": "Ensures the logical workflow order: a guest must be created (P1=AddGuest) before access can be granted (P2=GrantGuestAccess).",
+            "final_ltl_rule": "NOT ((NOT (AddGuest OR SearchGuests)) UNTIL GrantGuestAccess)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "When a guest is deleted, all associated access and codes must be revoked to ensure full data erasure.",
+                "scope": "Data Deletion",
+                "definition": "Refined from ESTI-POLICY-045 ('erase all their user data') and ESTI-POLICY-047 ('confirmation that... data has been deleted'). Ensures deletion is a clean and complete process.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-045 / ESTI-POLICY-047"
+                }
+            },
+            "ethical_principles": [
+                "Privacy and Data Governance",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Ensures the deletion workflow is complete (P1=DeleteGuest) by requiring guest access to be revoked (P2=RevokeGuestAccess). This is a simplified, more testable version of the original rule.",
+            "final_ltl_rule": "ALWAYS (DeleteGuest IMPLIES EVENTUALLY(RevokeGuestAccess))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Every sensitive event must be recorded in an audit log.",
+                "scope": "Auditing",
+                "definition": "Although ESTI lacks a direct audit rule, it's implied by policies like 038 ('If an unauthorized software change is detected...'). This makes the requirement explicit and verifiable via 'RecordAuditEvent'.",
+                "reference": {
+                    "source_id": "ESTI-POLICY-038"
+                }
+            },
+            "ethical_principles": [
+                "Transparency",
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Consolidates all audit rules into one. Ensures all state-changing or code-generating actions (P1) are eventually audited (P2=RecordAuditEvent).",
+            "final_ltl_rule": "ALWAYS ((GrantGuestAccess OR RevokeGuestAccess OR LockDoor OR UnlockDoor OR AddGuest OR DeleteGuest OR GenerateTemporaryAccessCode OR RevokeTemporaryAccessCode) IMPLIES EVENTUALLY(RecordAuditEvent))"
+        }
+    ]
+}

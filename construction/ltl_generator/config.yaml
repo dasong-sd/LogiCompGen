@@ -1,0 +1,10 @@
+llm:
+  model_name: "gpt-5-mini"
+  temperature: 0.7
+  max_completion_tokens: 20960
+input:
+  path: "../utils/policies"
+  risk_categories_file: "./risk_categories.json"
+
+output:
+  output_directory: "./results"

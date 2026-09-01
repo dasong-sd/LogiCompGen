@@ -1,0 +1,78 @@
+{
+    "valid_ltl_rules": [
+        {
+            "source_policy": {
+                "policy_description": "API calls accessing e-PHI (e.g., AccessUserInfo, AccessMedicalHistory, ViewPrescriptions, RequestPrescription) cannot occur before a successful authorization/authentication check has happened in the session.",
+                "scope": "Authentication",
+                "definition": "Consolidated rule derived from HIPAA-Sec-164.312(d). Ensures sensitive API calls require prior authentication within the session.",
+                "reference": {
+                    "source_id": "HIPAA-Sec-164.312(d)-Refined"
+                }
+            },
+            "ethical_principles": [
+                "Privacy and Data Governance",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+            "api_mapping_analysis": "Refined Analysis: Merged rules from HIPAA Authentication policy. This requires a prior authorization/authentication event (P1 = CheckAuthorization) before sensitive actions (P2) can occur. P2 represents the core APIs accessing e-PHI (AccessUserInfo, AccessMedicalHistory, ViewPrescriptions, RequestPrescription). The `NOT ((NOT P1) UNTIL P2)` pattern correctly enforces this precondition.",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL (ConsultDoctor OR AccessUserInfo OR AccessMedicalHistory OR ViewPrescriptions OR RequestPrescription OR ScheduleAppointment OR ManageAppointments))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Every API call that successfully accesses e-PHI (e.g., AccessMedicalHistory, AccessUserInfo, ViewPrescriptions) must eventually be followed by an audit log event.",
+                "scope": "Auditing",
+                "definition": "Consolidated rule derived from HIPAA-Sec-164.312(b). Ensures e-PHI access is logged.",
+                "reference": {
+                    "source_id": "HIPAA-Sec-164.312(b)"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Privacy and Data Governance",
+                "Transparency",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Refined Analysis: Merged rules from HIPAA Auditing policy. This requires that any access to e-PHI (P1) must eventually be followed by an audit record (P2). P1 represents the core APIs accessing e-PHI (AccessMedicalHistory, AccessUserInfo, ViewPrescriptions). P2 represents the audit logging API (RecordAuditEvent). The `ALWAYS (P1 IMPLIES EVENTUALLY(P2))` pattern correctly enforces this eventual logging requirement.",
+            "final_ltl_rule": "ALWAYS ((ConsultDoctor OR AccessUserInfo OR AccessMedicalHistory OR ViewPrescriptions OR RequestPrescription OR ScheduleAppointment OR ManageAppointments) IMPLIES EVENTUALLY(RecordAuditEvent))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "A prescription can only be requested after a medical consultation with a doctor has occurred.",
+                "scope": "Clinical Workflow / Prescription Logic",
+                "definition": "This is a standard medical workflow rule to ensure prescriptions are based on a recent consultation.",
+                "reference": {
+                    "source_id": "ClinicalWorkflow-001"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety",
+                "Human Agency and Oversight"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+            "api_mapping_analysis": "Maps the business logic requirement that a consultation (P1=ConsultDoctor) must happen at some point before a prescription is requested (P2=RequestPrescription).",
+            "final_ltl_rule": "NOT ((NOT ConsultDoctor) UNTIL RequestPrescription)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Secure messaging with a doctor is only enabled after a consultation or appointment has been established.",
+                "scope": "Clinical Workflow / Communication Logic",
+                "definition": "This is a business logic rule to prevent unsolicited messages and tie communication to an established patient-doctor relationship.",
+                "reference": {
+                    "source_id": "BusinessLogic-003"
+                }
+            },
+            "ethical_principles": [
+                "Privacy and Data Governance",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+            "api_mapping_analysis": "Maps the business logic requirement that *either* a consultation (P1a=ConsultDoctor) *or* a scheduled appointment (P1b=ScheduleAppointment) must happen at some point before secure messaging is enabled (P2=SendMessage).",
+            "final_ltl_rule": "NOT ((NOT (ConsultDoctor OR ScheduleAppointment)) UNTIL SendMessage)"
+        }
+    ]
+}

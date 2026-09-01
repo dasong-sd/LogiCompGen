@@ -1,0 +1,10 @@
+domain,display_name,generation_seed,trace_pool_size,status,stop_reason,valid_trace_count_at_stop,number_of_batches,attempt_count
+financial,Financial Services,42,1480,converged,convergence,1480,74,1555
+financial,Financial Services,123,1400,converged,convergence,1400,70,1463
+financial,Financial Services,2026,1240,converged,convergence,1240,62,1294
+tele_healthcare,Tele-Healthcare,42,3840,converged,convergence,3840,192,11240
+tele_healthcare,Tele-Healthcare,123,4600,converged,convergence,4600,230,13709
+tele_healthcare,Tele-Healthcare,2026,3600,converged,convergence,3600,180,10633
+smart_home,Smart Home IoT,42,5000,max_limit_reached_without_convergence,max_limit_reached_without_convergence,5000,250,11861
+smart_home,Smart Home IoT,123,5000,max_limit_reached_without_convergence,max_limit_reached_without_convergence,5000,250,11980
+smart_home,Smart Home IoT,2026,5000,max_limit_reached_without_convergence,max_limit_reached_without_convergence,5000,250,12056

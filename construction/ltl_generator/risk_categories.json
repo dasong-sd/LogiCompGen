@@ -1,0 +1,14 @@
+{
+    "instruction_adherence": {
+        "name": "Instruction Adherence",
+        "description": "A trigger action (P1) must eventually be followed by an expected outcome (P2) at some point in the future. This is for cause-and-effect relationships where the timing is not immediate.",
+        "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+        "extended_example": "For multiple outcomes (P2, P3) after a trigger (P1): ALWAYS (P1 IMPLIES (EVENTUALLY(P2) AND EVENTUALLY(P3)))"
+    },
+    "operational_restriction": {
+        "name": "Operational Restriction",
+        "description": "A sensitive action (P2) is forbidden until a required preparatory check or condition (P1) has occurred at some point in the past.",
+        "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+        "extended_example": "For multiple preconditions (P1, P_pre) before an action (P2): (NOT ((NOT P1) UNTIL P2)) AND (NOT ((NOT P_pre) UNTIL P2))"
+    }
+}

@@ -1,0 +1,1217 @@
+{
+  "rq": "RQ1",
+  "analysis": "LOGICOMPGEN multi-generation-seed robustness",
+  "design": {
+    "logicompgen_generation_seeds": [
+      42,
+      123,
+      2026
+    ],
+    "subsamples_per_seed": 10000,
+    "trace_budget_per_subsample": 40,
+    "sampling": "without replacement within each generation run",
+    "aggregation": "For each metric, first average repeated 40-trace subsamples within each generation seed, then report the mean and sample standard deviation of the three seed-level means.",
+    "gpt5_mini": "One fixed direct-generation batch of 40 traces per domain; reported as a point estimate without between-run variation.",
+    "comparison_boundary": "Equal metric-computation sample size (40 traces), not equal token, monetary, wall-clock, or total generation cost."
+  },
+  "master_sampling_seed": 20260729,
+  "domains": {
+    "financial": {
+      "display_name": "Financial Services",
+      "api_count": 8,
+      "gpt5_mini_fixed_40": {
+        "unique_2gram_count": 15.0,
+        "2gram_novelty_ratio": 0.09933774834437085,
+        "unique_3gram_count": 28.0,
+        "3gram_novelty_ratio": 0.25,
+        "unique_4gram_count": 37.0,
+        "4gram_novelty_ratio": 0.49333333333333335,
+        "atc": 0.234375
+      },
+      "logicompgen_generation_seeds": {
+        "42": {
+          "trace_pool_size": 1480,
+          "sampling_seed": 1186456564869713585,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 1480,
+            "number_of_batches": 74,
+            "attempt_count": 1555
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 44.3464,
+              "median": 44.0,
+              "sd": 1.6280884826110407,
+              "ci95_lower": 41.0,
+              "ci95_upper": 47.0,
+              "minimum": 37.0,
+              "maximum": 49.0,
+              "gpt5_mini_value": 15.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.15838,
+              "median": 0.15714285714285714,
+              "sd": 0.005814601723610859,
+              "ci95_lower": 0.14642857142857144,
+              "ci95_upper": 0.16785714285714284,
+              "minimum": 0.13214285714285715,
+              "maximum": 0.175,
+              "gpt5_mini_value": 0.09933774834437085,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 117.5318,
+              "median": 118.0,
+              "sd": 6.736135859128084,
+              "ci95_lower": 104.0,
+              "ci95_upper": 130.0,
+              "minimum": 86.0,
+              "maximum": 145.0,
+              "gpt5_mini_value": 28.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.48971583333333335,
+              "median": 0.49166666666666664,
+              "sd": 0.02806723274636702,
+              "ci95_lower": 0.43333333333333335,
+              "ci95_upper": 0.5416666666666666,
+              "minimum": 0.35833333333333334,
+              "maximum": 0.6041666666666666,
+              "gpt5_mini_value": 0.25,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 150.3895,
+              "median": 151.0,
+              "sd": 8.022008789106458,
+              "ci95_lower": 134.0,
+              "ci95_upper": 165.0,
+              "minimum": 113.0,
+              "maximum": 179.0,
+              "gpt5_mini_value": 37.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.7519475,
+              "median": 0.755,
+              "sd": 0.040110043945532296,
+              "ci95_lower": 0.67,
+              "ci95_upper": 0.825,
+              "minimum": 0.565,
+              "maximum": 0.895,
+              "gpt5_mini_value": 0.49333333333333335,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.6929125,
+              "median": 0.6875,
+              "sd": 0.02543888254079751,
+              "ci95_lower": 0.640625,
+              "ci95_upper": 0.734375,
+              "minimum": 0.578125,
+              "maximum": 0.765625,
+              "gpt5_mini_value": 0.234375,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "123": {
+          "trace_pool_size": 1400,
+          "sampling_seed": 2515268562613009496,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 1400,
+            "number_of_batches": 70,
+            "attempt_count": 1463
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 44.8632,
+              "median": 45.0,
+              "sd": 1.6046629721924266,
+              "ci95_lower": 41.0,
+              "ci95_upper": 48.0,
+              "minimum": 38.0,
+              "maximum": 49.0,
+              "gpt5_mini_value": 15.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.16022571428571428,
+              "median": 0.16071428571428573,
+              "sd": 0.005730939186401521,
+              "ci95_lower": 0.14642857142857144,
+              "ci95_upper": 0.17142857142857143,
+              "minimum": 0.1357142857142857,
+              "maximum": 0.175,
+              "gpt5_mini_value": 0.09933774834437085,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 119.1931,
+              "median": 119.0,
+              "sd": 6.606495059235023,
+              "ci95_lower": 106.0,
+              "ci95_upper": 132.0,
+              "minimum": 92.0,
+              "maximum": 141.0,
+              "gpt5_mini_value": 28.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.4966379166666667,
+              "median": 0.49583333333333335,
+              "sd": 0.027527062746812596,
+              "ci95_lower": 0.44166666666666665,
+              "ci95_upper": 0.55,
+              "minimum": 0.38333333333333336,
+              "maximum": 0.5875,
+              "gpt5_mini_value": 0.25,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 153.2102,
+              "median": 154.0,
+              "sd": 7.901952926081286,
+              "ci95_lower": 137.0,
+              "ci95_upper": 168.0,
+              "minimum": 122.0,
+              "maximum": 180.0,
+              "gpt5_mini_value": 37.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.766051,
+              "median": 0.77,
+              "sd": 0.03950976463040644,
+              "ci95_lower": 0.685,
+              "ci95_upper": 0.84,
+              "minimum": 0.61,
+              "maximum": 0.9,
+              "gpt5_mini_value": 0.49333333333333335,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.7009875,
+              "median": 0.703125,
+              "sd": 0.025072858940506666,
+              "ci95_lower": 0.640625,
+              "ci95_upper": 0.75,
+              "minimum": 0.59375,
+              "maximum": 0.765625,
+              "gpt5_mini_value": 0.234375,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "2026": {
+          "trace_pool_size": 1240,
+          "sampling_seed": 13549445516553731051,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 1240,
+            "number_of_batches": 62,
+            "attempt_count": 1294
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 44.8251,
+              "median": 45.0,
+              "sd": 1.6177056862015158,
+              "ci95_lower": 41.0,
+              "ci95_upper": 48.0,
+              "minimum": 36.0,
+              "maximum": 49.0,
+              "gpt5_mini_value": 15.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.16008964285714286,
+              "median": 0.16071428571428573,
+              "sd": 0.0057775203078625536,
+              "ci95_lower": 0.14642857142857144,
+              "ci95_upper": 0.17142857142857143,
+              "minimum": 0.12857142857142856,
+              "maximum": 0.175,
+              "gpt5_mini_value": 0.09933774834437085,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 118.8597,
+              "median": 119.0,
+              "sd": 6.656128477924045,
+              "ci95_lower": 106.0,
+              "ci95_upper": 132.0,
+              "minimum": 91.0,
+              "maximum": 143.0,
+              "gpt5_mini_value": 28.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.49524875,
+              "median": 0.49583333333333335,
+              "sd": 0.027733868658016855,
+              "ci95_lower": 0.44166666666666665,
+              "ci95_upper": 0.55,
+              "minimum": 0.37916666666666665,
+              "maximum": 0.5958333333333333,
+              "gpt5_mini_value": 0.25,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 152.4568,
+              "median": 153.0,
+              "sd": 7.922878956610161,
+              "ci95_lower": 136.0,
+              "ci95_upper": 167.0,
+              "minimum": 118.0,
+              "maximum": 180.0,
+              "gpt5_mini_value": 37.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.762284,
+              "median": 0.765,
+              "sd": 0.039614394783050816,
+              "ci95_lower": 0.68,
+              "ci95_upper": 0.835,
+              "minimum": 0.59,
+              "maximum": 0.9,
+              "gpt5_mini_value": 0.49333333333333335,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.7003921875,
+              "median": 0.703125,
+              "sd": 0.025276651346898684,
+              "ci95_lower": 0.640625,
+              "ci95_upper": 0.75,
+              "minimum": 0.5625,
+              "maximum": 0.765625,
+              "gpt5_mini_value": 0.234375,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        }
+      },
+      "aggregate_across_generation_seeds": {
+        "unique_2gram_count": {
+          "logicompgen_mean_across_generation_seeds": 44.67823333333333,
+          "logicompgen_sd_across_generation_seeds": 0.2880068112620466,
+          "logicompgen_minimum_seed_mean": 44.3464,
+          "logicompgen_maximum_seed_mean": 44.8632,
+          "gpt5_mini_value": 15.0,
+          "generation_seed_means": {
+            "42": 44.3464,
+            "123": 44.8632,
+            "2026": 44.8251
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "2gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.15956511904761905,
+          "logicompgen_sd_across_generation_seeds": 0.0010285957545073188,
+          "logicompgen_minimum_seed_mean": 0.15838,
+          "logicompgen_maximum_seed_mean": 0.16022571428571428,
+          "gpt5_mini_value": 0.09933774834437085,
+          "generation_seed_means": {
+            "42": 0.15838,
+            "123": 0.16022571428571428,
+            "2026": 0.16008964285714286
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_3gram_count": {
+          "logicompgen_mean_across_generation_seeds": 118.5282,
+          "logicompgen_sd_across_generation_seeds": 0.8788621109138782,
+          "logicompgen_minimum_seed_mean": 117.5318,
+          "logicompgen_maximum_seed_mean": 119.1931,
+          "gpt5_mini_value": 28.0,
+          "generation_seed_means": {
+            "42": 117.5318,
+            "123": 119.1931,
+            "2026": 118.8597
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "3gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.4938675,
+          "logicompgen_sd_across_generation_seeds": 0.003661925462141162,
+          "logicompgen_minimum_seed_mean": 0.48971583333333335,
+          "logicompgen_maximum_seed_mean": 0.4966379166666667,
+          "gpt5_mini_value": 0.25,
+          "generation_seed_means": {
+            "42": 0.48971583333333335,
+            "123": 0.4966379166666667,
+            "2026": 0.49524875
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_4gram_count": {
+          "logicompgen_mean_across_generation_seeds": 152.01883333333333,
+          "logicompgen_sd_across_generation_seeds": 1.4604616473339223,
+          "logicompgen_minimum_seed_mean": 150.3895,
+          "logicompgen_maximum_seed_mean": 153.2102,
+          "gpt5_mini_value": 37.0,
+          "generation_seed_means": {
+            "42": 150.3895,
+            "123": 153.2102,
+            "2026": 152.4568
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "4gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.7600941666666666,
+          "logicompgen_sd_across_generation_seeds": 0.007302308236669659,
+          "logicompgen_minimum_seed_mean": 0.7519475,
+          "logicompgen_maximum_seed_mean": 0.766051,
+          "gpt5_mini_value": 0.49333333333333335,
+          "generation_seed_means": {
+            "42": 0.7519475,
+            "123": 0.766051,
+            "2026": 0.762284
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "atc": {
+          "logicompgen_mean_across_generation_seeds": 0.6980973958333333,
+          "logicompgen_sd_across_generation_seeds": 0.004500106425969478,
+          "logicompgen_minimum_seed_mean": 0.6929125,
+          "logicompgen_maximum_seed_mean": 0.7009875,
+          "gpt5_mini_value": 0.234375,
+          "generation_seed_means": {
+            "42": 0.6929125,
+            "123": 0.7009875,
+            "2026": 0.7003921875
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        }
+      }
+    },
+    "tele_healthcare": {
+      "display_name": "Tele-Healthcare",
+      "api_count": 13,
+      "gpt5_mini_fixed_40": {
+        "unique_2gram_count": 48.0,
+        "2gram_novelty_ratio": 0.19123505976095617,
+        "unique_3gram_count": 91.0,
+        "3gram_novelty_ratio": 0.4312796208530806,
+        "unique_4gram_count": 118.0,
+        "4gram_novelty_ratio": 0.6900584795321637,
+        "atc": 0.28402366863905326
+      },
+      "logicompgen_generation_seeds": {
+        "42": {
+          "trace_pool_size": 3840,
+          "sampling_seed": 652463090119594587,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 3840,
+            "number_of_batches": 192,
+            "attempt_count": 11240
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 73.7896,
+              "median": 74.0,
+              "sd": 4.3989165582775795,
+              "ci95_lower": 65.0,
+              "ci95_upper": 82.0,
+              "minimum": 59.0,
+              "maximum": 91.0,
+              "gpt5_mini_value": 48.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.2635342857142857,
+              "median": 0.2642857142857143,
+              "sd": 0.015710416279562787,
+              "ci95_lower": 0.23214285714285715,
+              "ci95_upper": 0.29285714285714287,
+              "minimum": 0.21071428571428572,
+              "maximum": 0.325,
+              "gpt5_mini_value": 0.19123505976095617,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 131.1802,
+              "median": 131.0,
+              "sd": 8.755455085795138,
+              "ci95_lower": 114.0,
+              "ci95_upper": 148.0,
+              "minimum": 100.0,
+              "maximum": 163.0,
+              "gpt5_mini_value": 91.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.5465841666666666,
+              "median": 0.5458333333333333,
+              "sd": 0.03648106285747974,
+              "ci95_lower": 0.475,
+              "ci95_upper": 0.6166666666666667,
+              "minimum": 0.4166666666666667,
+              "maximum": 0.6791666666666667,
+              "gpt5_mini_value": 0.4312796208530806,
+              "proportion_logicompgen_greater": 0.9995,
+              "proportion_logicompgen_greater_or_equal": 0.9995
+            },
+            "unique_4gram_count": {
+              "mean": 146.0015,
+              "median": 146.0,
+              "sd": 9.266999810000422,
+              "ci95_lower": 127.0,
+              "ci95_upper": 163.0,
+              "minimum": 113.0,
+              "maximum": 175.0,
+              "gpt5_mini_value": 118.0,
+              "proportion_logicompgen_greater": 0.9986,
+              "proportion_logicompgen_greater_or_equal": 0.999
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.7300075,
+              "median": 0.73,
+              "sd": 0.046334999050002115,
+              "ci95_lower": 0.635,
+              "ci95_upper": 0.815,
+              "minimum": 0.565,
+              "maximum": 0.875,
+              "gpt5_mini_value": 0.6900584795321637,
+              "proportion_logicompgen_greater": 0.7942,
+              "proportion_logicompgen_greater_or_equal": 0.7942
+            },
+            "atc": {
+              "mean": 0.43662485207100593,
+              "median": 0.4378698224852071,
+              "sd": 0.026029092060814083,
+              "ci95_lower": 0.38461538461538464,
+              "ci95_upper": 0.48520710059171596,
+              "minimum": 0.34911242603550297,
+              "maximum": 0.5384615384615384,
+              "gpt5_mini_value": 0.28402366863905326,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "123": {
+          "trace_pool_size": 4600,
+          "sampling_seed": 12202936453250106925,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 4600,
+            "number_of_batches": 230,
+            "attempt_count": 13709
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 73.4386,
+              "median": 74.0,
+              "sd": 4.420450664627741,
+              "ci95_lower": 65.0,
+              "ci95_upper": 82.0,
+              "minimum": 58.0,
+              "maximum": 90.0,
+              "gpt5_mini_value": 48.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.2622807142857143,
+              "median": 0.2642857142857143,
+              "sd": 0.015787323802241935,
+              "ci95_lower": 0.23214285714285715,
+              "ci95_upper": 0.29285714285714287,
+              "minimum": 0.20714285714285716,
+              "maximum": 0.32142857142857145,
+              "gpt5_mini_value": 0.19123505976095617,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 130.7855,
+              "median": 131.0,
+              "sd": 8.710721980280496,
+              "ci95_lower": 114.0,
+              "ci95_upper": 148.0,
+              "minimum": 99.0,
+              "maximum": 160.0,
+              "gpt5_mini_value": 91.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.5449395833333334,
+              "median": 0.5458333333333333,
+              "sd": 0.036294674917835404,
+              "ci95_lower": 0.475,
+              "ci95_upper": 0.6166666666666667,
+              "minimum": 0.4125,
+              "maximum": 0.6666666666666666,
+              "gpt5_mini_value": 0.4312796208530806,
+              "proportion_logicompgen_greater": 0.999,
+              "proportion_logicompgen_greater_or_equal": 0.999
+            },
+            "unique_4gram_count": {
+              "mean": 145.9617,
+              "median": 146.0,
+              "sd": 9.2282040010453,
+              "ci95_lower": 127.0,
+              "ci95_upper": 163.0,
+              "minimum": 109.0,
+              "maximum": 178.0,
+              "gpt5_mini_value": 118.0,
+              "proportion_logicompgen_greater": 0.9966,
+              "proportion_logicompgen_greater_or_equal": 0.9975
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.7298085,
+              "median": 0.73,
+              "sd": 0.046141020005226505,
+              "ci95_lower": 0.635,
+              "ci95_upper": 0.815,
+              "minimum": 0.545,
+              "maximum": 0.89,
+              "gpt5_mini_value": 0.6900584795321637,
+              "proportion_logicompgen_greater": 0.7929,
+              "proportion_logicompgen_greater_or_equal": 0.7929
+            },
+            "atc": {
+              "mean": 0.43454792899408284,
+              "median": 0.4378698224852071,
+              "sd": 0.026156512808448173,
+              "ci95_lower": 0.38461538461538464,
+              "ci95_upper": 0.48520710059171596,
+              "minimum": 0.3431952662721893,
+              "maximum": 0.5325443786982249,
+              "gpt5_mini_value": 0.28402366863905326,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "2026": {
+          "trace_pool_size": 3600,
+          "sampling_seed": 17511010586541335849,
+          "run_status": {
+            "status": "converged",
+            "stop_reason": "convergence",
+            "valid_trace_count_at_stop": 3600,
+            "number_of_batches": 180,
+            "attempt_count": 10633
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 73.2558,
+              "median": 73.0,
+              "sd": 4.328168164936108,
+              "ci95_lower": 65.0,
+              "ci95_upper": 82.0,
+              "minimum": 56.0,
+              "maximum": 89.0,
+              "gpt5_mini_value": 48.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.26162785714285713,
+              "median": 0.26071428571428573,
+              "sd": 0.015457743446200387,
+              "ci95_lower": 0.23214285714285715,
+              "ci95_upper": 0.29285714285714287,
+              "minimum": 0.2,
+              "maximum": 0.31785714285714284,
+              "gpt5_mini_value": 0.19123505976095617,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 131.1017,
+              "median": 131.0,
+              "sd": 8.48978001755491,
+              "ci95_lower": 114.0,
+              "ci95_upper": 147.0,
+              "minimum": 97.0,
+              "maximum": 162.0,
+              "gpt5_mini_value": 91.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.5462570833333333,
+              "median": 0.5458333333333333,
+              "sd": 0.03537408340647879,
+              "ci95_lower": 0.475,
+              "ci95_upper": 0.6125,
+              "minimum": 0.4041666666666667,
+              "maximum": 0.675,
+              "gpt5_mini_value": 0.4312796208530806,
+              "proportion_logicompgen_greater": 0.999,
+              "proportion_logicompgen_greater_or_equal": 0.999
+            },
+            "unique_4gram_count": {
+              "mean": 146.8487,
+              "median": 147.0,
+              "sd": 9.059261301647787,
+              "ci95_lower": 129.0,
+              "ci95_upper": 164.0,
+              "minimum": 111.0,
+              "maximum": 177.0,
+              "gpt5_mini_value": 118.0,
+              "proportion_logicompgen_greater": 0.9981,
+              "proportion_logicompgen_greater_or_equal": 0.9988
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.7342435,
+              "median": 0.735,
+              "sd": 0.04529630650823894,
+              "ci95_lower": 0.645,
+              "ci95_upper": 0.82,
+              "minimum": 0.555,
+              "maximum": 0.885,
+              "gpt5_mini_value": 0.6900584795321637,
+              "proportion_logicompgen_greater": 0.8227,
+              "proportion_logicompgen_greater_or_equal": 0.8227
+            },
+            "atc": {
+              "mean": 0.43346627218934913,
+              "median": 0.4319526627218935,
+              "sd": 0.02561046251441484,
+              "ci95_lower": 0.38461538461538464,
+              "ci95_upper": 0.48520710059171596,
+              "minimum": 0.33136094674556216,
+              "maximum": 0.5266272189349113,
+              "gpt5_mini_value": 0.28402366863905326,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        }
+      },
+      "aggregate_across_generation_seeds": {
+        "unique_2gram_count": {
+          "logicompgen_mean_across_generation_seeds": 73.49466666666666,
+          "logicompgen_sd_across_generation_seeds": 0.2712806910440423,
+          "logicompgen_minimum_seed_mean": 73.2558,
+          "logicompgen_maximum_seed_mean": 73.7896,
+          "gpt5_mini_value": 48.0,
+          "generation_seed_means": {
+            "42": 73.7896,
+            "123": 73.4386,
+            "2026": 73.2558
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "2gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.26248095238095237,
+          "logicompgen_sd_across_generation_seeds": 0.0009688596108715857,
+          "logicompgen_minimum_seed_mean": 0.26162785714285713,
+          "logicompgen_maximum_seed_mean": 0.2635342857142857,
+          "gpt5_mini_value": 0.19123505976095617,
+          "generation_seed_means": {
+            "42": 0.2635342857142857,
+            "123": 0.2622807142857143,
+            "2026": 0.26162785714285713
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_3gram_count": {
+          "logicompgen_mean_across_generation_seeds": 131.02246666666667,
+          "logicompgen_sd_across_generation_seeds": 0.20893889856446513,
+          "logicompgen_minimum_seed_mean": 130.7855,
+          "logicompgen_maximum_seed_mean": 131.1802,
+          "gpt5_mini_value": 91.0,
+          "generation_seed_means": {
+            "42": 131.1802,
+            "123": 130.7855,
+            "2026": 131.1017
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "3gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.5459269444444445,
+          "logicompgen_sd_across_generation_seeds": 0.000870578744018595,
+          "logicompgen_minimum_seed_mean": 0.5449395833333334,
+          "logicompgen_maximum_seed_mean": 0.5465841666666666,
+          "gpt5_mini_value": 0.4312796208530806,
+          "generation_seed_means": {
+            "42": 0.5465841666666666,
+            "123": 0.5449395833333334,
+            "2026": 0.5462570833333333
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_4gram_count": {
+          "logicompgen_mean_across_generation_seeds": 146.27063333333334,
+          "logicompgen_sd_across_generation_seeds": 0.5010157815212386,
+          "logicompgen_minimum_seed_mean": 145.9617,
+          "logicompgen_maximum_seed_mean": 146.8487,
+          "gpt5_mini_value": 118.0,
+          "generation_seed_means": {
+            "42": 146.0015,
+            "123": 145.9617,
+            "2026": 146.8487
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "4gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.7313531666666667,
+          "logicompgen_sd_across_generation_seeds": 0.002505078907606201,
+          "logicompgen_minimum_seed_mean": 0.7298085,
+          "logicompgen_maximum_seed_mean": 0.7342435,
+          "gpt5_mini_value": 0.6900584795321637,
+          "generation_seed_means": {
+            "42": 0.7300075,
+            "123": 0.7298085,
+            "2026": 0.7342435
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "atc": {
+          "logicompgen_mean_across_generation_seeds": 0.43487968441814595,
+          "logicompgen_sd_across_generation_seeds": 0.001605211189609718,
+          "logicompgen_minimum_seed_mean": 0.43346627218934913,
+          "logicompgen_maximum_seed_mean": 0.43662485207100593,
+          "gpt5_mini_value": 0.28402366863905326,
+          "generation_seed_means": {
+            "42": 0.43662485207100593,
+            "123": 0.43454792899408284,
+            "2026": 0.43346627218934913
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        }
+      }
+    },
+    "smart_home": {
+      "display_name": "Smart Home IoT",
+      "api_count": 13,
+      "gpt5_mini_fixed_40": {
+        "unique_2gram_count": 51.0,
+        "2gram_novelty_ratio": 0.17465753424657535,
+        "unique_3gram_count": 105.0,
+        "3gram_novelty_ratio": 0.4166666666666667,
+        "unique_4gram_count": 147.0,
+        "4gram_novelty_ratio": 0.6933962264150944,
+        "atc": 0.30177514792899407
+      },
+      "logicompgen_generation_seeds": {
+        "42": {
+          "trace_pool_size": 5000,
+          "sampling_seed": 5086181097673313491,
+          "run_status": {
+            "status": "max_limit_reached_without_convergence",
+            "stop_reason": "max_limit_reached_without_convergence",
+            "valid_trace_count_at_stop": 5000,
+            "number_of_batches": 250,
+            "attempt_count": 11861
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 97.9548,
+              "median": 98.0,
+              "sd": 4.309502771946451,
+              "ci95_lower": 89.0,
+              "ci95_upper": 106.0,
+              "minimum": 76.0,
+              "maximum": 112.0,
+              "gpt5_mini_value": 51.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.34983857142857144,
+              "median": 0.35,
+              "sd": 0.015391081328380183,
+              "ci95_lower": 0.31785714285714284,
+              "ci95_upper": 0.37857142857142856,
+              "minimum": 0.2714285714285714,
+              "maximum": 0.4,
+              "gpt5_mini_value": 0.17465753424657535,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 189.5791,
+              "median": 190.0,
+              "sd": 6.829319669682704,
+              "ci95_lower": 176.0,
+              "ci95_upper": 202.0,
+              "minimum": 156.0,
+              "maximum": 213.0,
+              "gpt5_mini_value": 105.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.7899129166666666,
+              "median": 0.7916666666666666,
+              "sd": 0.02845549862367793,
+              "ci95_lower": 0.7333333333333333,
+              "ci95_upper": 0.8416666666666667,
+              "minimum": 0.65,
+              "maximum": 0.8875,
+              "gpt5_mini_value": 0.4166666666666667,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 189.3976,
+              "median": 190.0,
+              "sd": 3.9920305448214046,
+              "ci95_lower": 181.0,
+              "ci95_upper": 196.0,
+              "minimum": 170.0,
+              "maximum": 200.0,
+              "gpt5_mini_value": 147.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.9469879999999999,
+              "median": 0.95,
+              "sd": 0.019960152724107,
+              "ci95_lower": 0.905,
+              "ci95_upper": 0.98,
+              "minimum": 0.85,
+              "maximum": 1.0,
+              "gpt5_mini_value": 0.6933962264150944,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.579614201183432,
+              "median": 0.5798816568047337,
+              "sd": 0.025500016402050005,
+              "ci95_lower": 0.5266272189349113,
+              "ci95_upper": 0.6272189349112426,
+              "minimum": 0.44970414201183434,
+              "maximum": 0.6627218934911243,
+              "gpt5_mini_value": 0.30177514792899407,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "123": {
+          "trace_pool_size": 5000,
+          "sampling_seed": 14591976243178314111,
+          "run_status": {
+            "status": "max_limit_reached_without_convergence",
+            "stop_reason": "max_limit_reached_without_convergence",
+            "valid_trace_count_at_stop": 5000,
+            "number_of_batches": 250,
+            "attempt_count": 11980
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 97.8391,
+              "median": 98.0,
+              "sd": 4.25043736711661,
+              "ci95_lower": 89.0,
+              "ci95_upper": 106.0,
+              "minimum": 80.0,
+              "maximum": 113.0,
+              "gpt5_mini_value": 51.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.34942535714285716,
+              "median": 0.35,
+              "sd": 0.015180133453987893,
+              "ci95_lower": 0.31785714285714284,
+              "ci95_upper": 0.37857142857142856,
+              "minimum": 0.2857142857142857,
+              "maximum": 0.4035714285714286,
+              "gpt5_mini_value": 0.17465753424657535,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 189.5315,
+              "median": 190.0,
+              "sd": 6.808982594661073,
+              "ci95_lower": 176.0,
+              "ci95_upper": 202.0,
+              "minimum": 159.0,
+              "maximum": 211.0,
+              "gpt5_mini_value": 105.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.7897145833333333,
+              "median": 0.7916666666666666,
+              "sd": 0.028370760811087806,
+              "ci95_lower": 0.7333333333333333,
+              "ci95_upper": 0.8416666666666667,
+              "minimum": 0.6625,
+              "maximum": 0.8791666666666667,
+              "gpt5_mini_value": 0.4166666666666667,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 189.3878,
+              "median": 190.0,
+              "sd": 3.966986873999692,
+              "ci95_lower": 181.0,
+              "ci95_upper": 196.0,
+              "minimum": 171.0,
+              "maximum": 199.0,
+              "gpt5_mini_value": 147.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.946939,
+              "median": 0.95,
+              "sd": 0.019834934369998437,
+              "ci95_lower": 0.905,
+              "ci95_upper": 0.98,
+              "minimum": 0.855,
+              "maximum": 0.995,
+              "gpt5_mini_value": 0.6933962264150944,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.5789295857988166,
+              "median": 0.5798816568047337,
+              "sd": 0.025150516965187043,
+              "ci95_lower": 0.5266272189349113,
+              "ci95_upper": 0.6272189349112426,
+              "minimum": 0.47337278106508873,
+              "maximum": 0.6686390532544378,
+              "gpt5_mini_value": 0.30177514792899407,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        },
+        "2026": {
+          "trace_pool_size": 5000,
+          "sampling_seed": 18410784962986684276,
+          "run_status": {
+            "status": "max_limit_reached_without_convergence",
+            "stop_reason": "max_limit_reached_without_convergence",
+            "valid_trace_count_at_stop": 5000,
+            "number_of_batches": 250,
+            "attempt_count": 12056
+          },
+          "metrics": {
+            "unique_2gram_count": {
+              "mean": 97.9592,
+              "median": 98.0,
+              "sd": 4.290684835505372,
+              "ci95_lower": 89.0,
+              "ci95_upper": 106.0,
+              "minimum": 82.0,
+              "maximum": 113.0,
+              "gpt5_mini_value": 51.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "2gram_novelty_ratio": {
+              "mean": 0.34985428571428573,
+              "median": 0.35,
+              "sd": 0.015323874412519188,
+              "ci95_lower": 0.31785714285714284,
+              "ci95_upper": 0.37857142857142856,
+              "minimum": 0.29285714285714287,
+              "maximum": 0.4035714285714286,
+              "gpt5_mini_value": 0.17465753424657535,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_3gram_count": {
+              "mean": 189.4036,
+              "median": 190.0,
+              "sd": 6.849948847978501,
+              "ci95_lower": 175.0,
+              "ci95_upper": 202.0,
+              "minimum": 160.0,
+              "maximum": 213.0,
+              "gpt5_mini_value": 105.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "3gram_novelty_ratio": {
+              "mean": 0.7891816666666667,
+              "median": 0.7916666666666666,
+              "sd": 0.028541453533243753,
+              "ci95_lower": 0.7291666666666666,
+              "ci95_upper": 0.8416666666666667,
+              "minimum": 0.6666666666666666,
+              "maximum": 0.8875,
+              "gpt5_mini_value": 0.4166666666666667,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "unique_4gram_count": {
+              "mean": 189.2042,
+              "median": 190.0,
+              "sd": 4.007431635203661,
+              "ci95_lower": 180.0,
+              "ci95_upper": 196.0,
+              "minimum": 166.0,
+              "maximum": 200.0,
+              "gpt5_mini_value": 147.0,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "4gram_novelty_ratio": {
+              "mean": 0.946021,
+              "median": 0.95,
+              "sd": 0.02003715817601828,
+              "ci95_lower": 0.9,
+              "ci95_upper": 0.98,
+              "minimum": 0.83,
+              "maximum": 1.0,
+              "gpt5_mini_value": 0.6933962264150944,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            },
+            "atc": {
+              "mean": 0.5796402366863905,
+              "median": 0.5798816568047337,
+              "sd": 0.025388667665712263,
+              "ci95_lower": 0.5266272189349113,
+              "ci95_upper": 0.6272189349112426,
+              "minimum": 0.48520710059171596,
+              "maximum": 0.6686390532544378,
+              "gpt5_mini_value": 0.30177514792899407,
+              "proportion_logicompgen_greater": 1.0,
+              "proportion_logicompgen_greater_or_equal": 1.0
+            }
+          }
+        }
+      },
+      "aggregate_across_generation_seeds": {
+        "unique_2gram_count": {
+          "logicompgen_mean_across_generation_seeds": 97.9177,
+          "logicompgen_sd_across_generation_seeds": 0.06810513930680916,
+          "logicompgen_minimum_seed_mean": 97.8391,
+          "logicompgen_maximum_seed_mean": 97.9592,
+          "gpt5_mini_value": 51.0,
+          "generation_seed_means": {
+            "42": 97.9548,
+            "123": 97.8391,
+            "2026": 97.9592
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "2gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.34970607142857146,
+          "logicompgen_sd_across_generation_seeds": 0.00024323264038146142,
+          "logicompgen_minimum_seed_mean": 0.34942535714285716,
+          "logicompgen_maximum_seed_mean": 0.34985428571428573,
+          "gpt5_mini_value": 0.17465753424657535,
+          "generation_seed_means": {
+            "42": 0.34983857142857144,
+            "123": 0.34942535714285716,
+            "2026": 0.34985428571428573
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_3gram_count": {
+          "logicompgen_mean_across_generation_seeds": 189.50473333333335,
+          "logicompgen_sd_across_generation_seeds": 0.09076014176571581,
+          "logicompgen_minimum_seed_mean": 189.4036,
+          "logicompgen_maximum_seed_mean": 189.5791,
+          "gpt5_mini_value": 105.0,
+          "generation_seed_means": {
+            "42": 189.5791,
+            "123": 189.5315,
+            "2026": 189.4036
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "3gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.7896030555555555,
+          "logicompgen_sd_across_generation_seeds": 0.0003781672573571439,
+          "logicompgen_minimum_seed_mean": 0.7891816666666667,
+          "logicompgen_maximum_seed_mean": 0.7899129166666666,
+          "gpt5_mini_value": 0.4166666666666667,
+          "generation_seed_means": {
+            "42": 0.7899129166666666,
+            "123": 0.7897145833333333,
+            "2026": 0.7891816666666667
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "unique_4gram_count": {
+          "logicompgen_mean_across_generation_seeds": 189.32986666666667,
+          "logicompgen_sd_across_generation_seeds": 0.10894077901931756,
+          "logicompgen_minimum_seed_mean": 189.2042,
+          "logicompgen_maximum_seed_mean": 189.3976,
+          "gpt5_mini_value": 147.0,
+          "generation_seed_means": {
+            "42": 189.3976,
+            "123": 189.3878,
+            "2026": 189.2042
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "4gram_novelty_ratio": {
+          "logicompgen_mean_across_generation_seeds": 0.9466493333333333,
+          "logicompgen_sd_across_generation_seeds": 0.0005447038950965061,
+          "logicompgen_minimum_seed_mean": 0.946021,
+          "logicompgen_maximum_seed_mean": 0.9469879999999999,
+          "gpt5_mini_value": 0.6933962264150944,
+          "generation_seed_means": {
+            "42": 0.9469879999999999,
+            "123": 0.946939,
+            "2026": 0.946021
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        },
+        "atc": {
+          "logicompgen_mean_across_generation_seeds": 0.5793946745562131,
+          "logicompgen_sd_across_generation_seeds": 0.00040298898998111907,
+          "logicompgen_minimum_seed_mean": 0.5789295857988166,
+          "logicompgen_maximum_seed_mean": 0.5796402366863905,
+          "gpt5_mini_value": 0.30177514792899407,
+          "generation_seed_means": {
+            "42": 0.579614201183432,
+            "123": 0.5789295857988166,
+            "2026": 0.5796402366863905
+          },
+          "all_seed_means_greater_than_gpt5_mini": true
+        }
+      }
+    }
+  }
+}

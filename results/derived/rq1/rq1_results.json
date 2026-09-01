@@ -1,0 +1,289 @@
+{
+  "rq": "RQ1",
+  "objective": "Compare structural API-call trace coverage between LOGICOMPGEN and direct GPT-5-Mini test generation.",
+  "comparison_scope": {
+    "primary_budget": "40 generated traces per method and domain",
+    "logicompgen_population": "All 300 existing generated traces per domain",
+    "logicompgen_resampling": "10000 random samples of 40 traces without replacement",
+    "gpt5_mini_population": "The 40 direct test-generation outputs in results/rq1_sources/direct_generation for each domain",
+    "excluded_data": "Instruction-conditioned GPT-5-Mini executions under results/raw_evaluations",
+    "cost_boundary": "The experiment compares structural coverage per generated trace. It does not compare token, monetary, or wall-clock cost."
+  },
+  "definitions": {
+    "atc": "number of unique adjacent API pairs divided by |API vocabulary|^2",
+    "k_trace": "number of unique contiguous API subsequences of length k",
+    "kgram_novelty_ratio": "number of unique k-grams divided by the total observable k-gram positions"
+  },
+  "random_seed": 20260729,
+  "resample_count": 10000,
+  "trace_budget": 40,
+  "domains": {
+    "financial": {
+      "display_name": "Financial Services",
+      "api_count": 8,
+      "logicompgen_all_trace_count": 300,
+      "logicompgen_selected": {
+        "method": "logicompgen",
+        "scope": "benchmark_selected_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 40,
+        "minimum_trace_length": 8,
+        "mean_trace_length": 8,
+        "median_trace_length": 8.0,
+        "maximum_trace_length": 8,
+        "unique_2gram_count": 46,
+        "2gram_opportunity_count": 280,
+        "2gram_novelty_ratio": 0.16428571428571428,
+        "unique_3gram_count": 118,
+        "3gram_opportunity_count": 240,
+        "3gram_novelty_ratio": 0.49166666666666664,
+        "unique_4gram_count": 151,
+        "4gram_opportunity_count": 200,
+        "4gram_novelty_ratio": 0.755,
+        "atc": 0.71875
+      },
+      "gpt5_mini_direct": {
+        "method": "gpt5_mini",
+        "scope": "direct_generation_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 27,
+        "minimum_trace_length": 1,
+        "mean_trace_length": 4.775,
+        "median_trace_length": 5.0,
+        "maximum_trace_length": 9,
+        "unique_2gram_count": 15,
+        "2gram_opportunity_count": 151,
+        "2gram_novelty_ratio": 0.09933774834437085,
+        "unique_3gram_count": 28,
+        "3gram_opportunity_count": 112,
+        "3gram_novelty_ratio": 0.25,
+        "unique_4gram_count": 37,
+        "4gram_opportunity_count": 75,
+        "4gram_novelty_ratio": 0.49333333333333335,
+        "atc": 0.234375
+      },
+      "logicompgen_repeated_subsampling": [
+        {
+          "metric": "atc",
+          "logicompgen_mean": 0.6908625,
+          "logicompgen_median": 0.6875,
+          "logicompgen_ci95_lower": 0.640625,
+          "logicompgen_ci95_upper": 0.734375,
+          "gpt5_mini_value": 0.234375,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_2gram_count",
+          "logicompgen_mean": 44.2152,
+          "logicompgen_median": 44.0,
+          "logicompgen_ci95_lower": 41.0,
+          "logicompgen_ci95_upper": 47.0,
+          "gpt5_mini_value": 15.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_3gram_count",
+          "logicompgen_mean": 116.6968,
+          "logicompgen_median": 117.0,
+          "logicompgen_ci95_lower": 103.0,
+          "logicompgen_ci95_upper": 130.0,
+          "gpt5_mini_value": 28.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_4gram_count",
+          "logicompgen_mean": 151.0542,
+          "logicompgen_median": 151.0,
+          "logicompgen_ci95_lower": 135.0,
+          "logicompgen_ci95_upper": 166.0,
+          "gpt5_mini_value": 37.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        }
+      ]
+    },
+    "tele_healthcare": {
+      "display_name": "Tele-Healthcare",
+      "api_count": 13,
+      "logicompgen_all_trace_count": 300,
+      "logicompgen_selected": {
+        "method": "logicompgen",
+        "scope": "benchmark_selected_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 38,
+        "minimum_trace_length": 8,
+        "mean_trace_length": 8,
+        "median_trace_length": 8.0,
+        "maximum_trace_length": 8,
+        "unique_2gram_count": 72,
+        "2gram_opportunity_count": 280,
+        "2gram_novelty_ratio": 0.2571428571428571,
+        "unique_3gram_count": 125,
+        "3gram_opportunity_count": 240,
+        "3gram_novelty_ratio": 0.5208333333333334,
+        "unique_4gram_count": 147,
+        "4gram_opportunity_count": 200,
+        "4gram_novelty_ratio": 0.735,
+        "atc": 0.4260355029585799
+      },
+      "gpt5_mini_direct": {
+        "method": "gpt5_mini",
+        "scope": "direct_generation_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 39,
+        "minimum_trace_length": 4,
+        "mean_trace_length": 7.275,
+        "median_trace_length": 7.0,
+        "maximum_trace_length": 14,
+        "unique_2gram_count": 48,
+        "2gram_opportunity_count": 251,
+        "2gram_novelty_ratio": 0.19123505976095617,
+        "unique_3gram_count": 91,
+        "3gram_opportunity_count": 211,
+        "3gram_novelty_ratio": 0.4312796208530806,
+        "unique_4gram_count": 118,
+        "4gram_opportunity_count": 171,
+        "4gram_novelty_ratio": 0.6900584795321637,
+        "atc": 0.28402366863905326
+      },
+      "logicompgen_repeated_subsampling": [
+        {
+          "metric": "atc",
+          "logicompgen_mean": 0.42839349112426034,
+          "logicompgen_median": 0.4260355029585799,
+          "logicompgen_ci95_lower": 0.378698224852071,
+          "logicompgen_ci95_upper": 0.47337278106508873,
+          "gpt5_mini_value": 0.28402366863905326,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_2gram_count",
+          "logicompgen_mean": 72.3985,
+          "logicompgen_median": 72.0,
+          "logicompgen_ci95_lower": 64.0,
+          "logicompgen_ci95_upper": 80.0,
+          "gpt5_mini_value": 48.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_3gram_count",
+          "logicompgen_mean": 130.2983,
+          "logicompgen_median": 130.0,
+          "logicompgen_ci95_lower": 114.0,
+          "logicompgen_ci95_upper": 146.0,
+          "gpt5_mini_value": 91.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_4gram_count",
+          "logicompgen_mean": 147.5465,
+          "logicompgen_median": 148.0,
+          "logicompgen_ci95_lower": 130.0,
+          "logicompgen_ci95_upper": 164.0,
+          "gpt5_mini_value": 118.0,
+          "proportion_logicompgen_greater": 0.999,
+          "proportion_logicompgen_greater_or_equal": 0.9992
+        }
+      ]
+    },
+    "smart_home": {
+      "display_name": "Smart Home IoT",
+      "api_count": 13,
+      "logicompgen_all_trace_count": 300,
+      "logicompgen_selected": {
+        "method": "logicompgen",
+        "scope": "benchmark_selected_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 40,
+        "minimum_trace_length": 8,
+        "mean_trace_length": 8,
+        "median_trace_length": 8.0,
+        "maximum_trace_length": 8,
+        "unique_2gram_count": 107,
+        "2gram_opportunity_count": 280,
+        "2gram_novelty_ratio": 0.3821428571428571,
+        "unique_3gram_count": 205,
+        "3gram_opportunity_count": 240,
+        "3gram_novelty_ratio": 0.8541666666666666,
+        "unique_4gram_count": 196,
+        "4gram_opportunity_count": 200,
+        "4gram_novelty_ratio": 0.98,
+        "atc": 0.6331360946745562
+      },
+      "gpt5_mini_direct": {
+        "method": "gpt5_mini",
+        "scope": "direct_generation_40",
+        "trace_count": 40,
+        "empty_trace_count": 0,
+        "unique_full_trace_count": 39,
+        "minimum_trace_length": 4,
+        "mean_trace_length": 8.3,
+        "median_trace_length": 8.0,
+        "maximum_trace_length": 14,
+        "unique_2gram_count": 51,
+        "2gram_opportunity_count": 292,
+        "2gram_novelty_ratio": 0.17465753424657535,
+        "unique_3gram_count": 105,
+        "3gram_opportunity_count": 252,
+        "3gram_novelty_ratio": 0.4166666666666667,
+        "unique_4gram_count": 147,
+        "4gram_opportunity_count": 212,
+        "4gram_novelty_ratio": 0.6933962264150944,
+        "atc": 0.30177514792899407
+      },
+      "logicompgen_repeated_subsampling": [
+        {
+          "metric": "atc",
+          "logicompgen_mean": 0.5707556213017752,
+          "logicompgen_median": 0.5680473372781065,
+          "logicompgen_ci95_lower": 0.5207100591715976,
+          "logicompgen_ci95_upper": 0.621301775147929,
+          "gpt5_mini_value": 0.30177514792899407,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_2gram_count",
+          "logicompgen_mean": 96.4577,
+          "logicompgen_median": 96.0,
+          "logicompgen_ci95_lower": 88.0,
+          "logicompgen_ci95_upper": 105.0,
+          "gpt5_mini_value": 51.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_3gram_count",
+          "logicompgen_mean": 187.8388,
+          "logicompgen_median": 188.0,
+          "logicompgen_ci95_lower": 175.0,
+          "logicompgen_ci95_upper": 200.0,
+          "gpt5_mini_value": 105.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        },
+        {
+          "metric": "unique_4gram_count",
+          "logicompgen_mean": 189.512,
+          "logicompgen_median": 190.0,
+          "logicompgen_ci95_lower": 181.0,
+          "logicompgen_ci95_upper": 196.0,
+          "gpt5_mini_value": 147.0,
+          "proportion_logicompgen_greater": 1.0,
+          "proportion_logicompgen_greater_or_equal": 1.0
+        }
+      ]
+    }
+  }
+}

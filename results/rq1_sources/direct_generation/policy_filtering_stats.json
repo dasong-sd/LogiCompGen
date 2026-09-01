@@ -1,0 +1,32 @@
+[
+    {
+        "scenario": "Bank Manager",
+        "base_policy_count": 193,
+        "total_word_count": 5564,
+        "rag_relevant_count": 17,
+        "final_selected_count": 7,
+        "generated_ltl_count": 8,
+        "filtered_ltl_count": 8,
+        "valid_ltl_count": 7
+    },
+    {
+        "scenario": "Teladoc",
+        "base_policy_count": 109,
+        "total_word_count": 2326,
+        "rag_relevant_count": 18,
+        "final_selected_count": 3,
+        "generated_ltl_count": 7,
+        "filtered_ltl_count": 7,
+        "valid_ltl_count": 4
+    },
+    {
+        "scenario": "Smart Lock",
+        "base_policy_count": 141,
+        "total_word_count": 3184,
+        "rag_relevant_count": 12,
+        "final_selected_count": 5,
+        "generated_ltl_count": 10,
+        "filtered_ltl_count": 8,
+        "valid_ltl_count": 6
+    }
+]

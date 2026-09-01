@@ -1,0 +1,13 @@
+domain,display_name,metric,logicompgen_mean,logicompgen_median,logicompgen_ci95_lower,logicompgen_ci95_upper,gpt5_mini_value,proportion_logicompgen_greater,proportion_logicompgen_greater_or_equal
+financial,Financial Services,atc,0.6908625,0.6875,0.640625,0.734375,0.234375,1.0,1.0
+financial,Financial Services,unique_2gram_count,44.2152,44.0,41.0,47.0,15.0,1.0,1.0
+financial,Financial Services,unique_3gram_count,116.6968,117.0,103.0,130.0,28.0,1.0,1.0
+financial,Financial Services,unique_4gram_count,151.0542,151.0,135.0,166.0,37.0,1.0,1.0
+tele_healthcare,Tele-Healthcare,atc,0.42839349112426034,0.4260355029585799,0.378698224852071,0.47337278106508873,0.28402366863905326,1.0,1.0
+tele_healthcare,Tele-Healthcare,unique_2gram_count,72.3985,72.0,64.0,80.0,48.0,1.0,1.0
+tele_healthcare,Tele-Healthcare,unique_3gram_count,130.2983,130.0,114.0,146.0,91.0,1.0,1.0
+tele_healthcare,Tele-Healthcare,unique_4gram_count,147.5465,148.0,130.0,164.0,118.0,0.999,0.9992
+smart_home,Smart Home IoT,atc,0.5707556213017752,0.5680473372781065,0.5207100591715976,0.621301775147929,0.30177514792899407,1.0,1.0
+smart_home,Smart Home IoT,unique_2gram_count,96.4577,96.0,88.0,105.0,51.0,1.0,1.0
+smart_home,Smart Home IoT,unique_3gram_count,187.8388,188.0,175.0,200.0,105.0,1.0,1.0
+smart_home,Smart Home IoT,unique_4gram_count,189.512,190.0,181.0,196.0,147.0,1.0,1.0

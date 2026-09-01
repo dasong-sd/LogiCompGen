@@ -1,0 +1,7 @@
+domain,display_name,api_count,method,scope,trace_count,empty_trace_count,unique_full_trace_count,minimum_trace_length,mean_trace_length,median_trace_length,maximum_trace_length,unique_2gram_count,2gram_opportunity_count,2gram_novelty_ratio,unique_3gram_count,3gram_opportunity_count,3gram_novelty_ratio,unique_4gram_count,4gram_opportunity_count,4gram_novelty_ratio,atc
+financial,Financial Services,8,logicompgen,benchmark_selected_40,40,0,40,8,8,8.0,8,46,280,0.16428571428571428,118,240,0.49166666666666664,151,200,0.755,0.71875
+financial,Financial Services,8,gpt5_mini,direct_generation_40,40,0,27,1,4.775,5.0,9,15,151,0.09933774834437085,28,112,0.25,37,75,0.49333333333333335,0.234375
+tele_healthcare,Tele-Healthcare,13,logicompgen,benchmark_selected_40,40,0,38,8,8,8.0,8,72,280,0.2571428571428571,125,240,0.5208333333333334,147,200,0.735,0.4260355029585799
+tele_healthcare,Tele-Healthcare,13,gpt5_mini,direct_generation_40,40,0,39,4,7.275,7.0,14,48,251,0.19123505976095617,91,211,0.4312796208530806,118,171,0.6900584795321637,0.28402366863905326
+smart_home,Smart Home IoT,13,logicompgen,benchmark_selected_40,40,0,40,8,8,8.0,8,107,280,0.3821428571428571,205,240,0.8541666666666666,196,200,0.98,0.6331360946745562
+smart_home,Smart Home IoT,13,gpt5_mini,direct_generation_40,40,0,39,4,8.3,8.0,14,51,292,0.17465753424657535,105,252,0.4166666666666667,147,212,0.6933962264150944,0.30177514792899407

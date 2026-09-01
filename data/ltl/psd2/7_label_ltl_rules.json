@@ -1,0 +1,135 @@
+{
+    "valid_ltl_rules": [
+        {
+            "source_policy": {
+                "policy_description": "Member States shall ensure that a payment service provider applies strong customer authentication where the payer: (b) initiates an electronic payment transaction.",
+                "scope": "Strong Customer Authentication",
+                "reference": {
+                    "source_id": "PSD2-Art97(1)(b)"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Maps sensitive financial action (P1=TransferFunds) to require authorization (P2=CheckAuthorization) to have occurred before or at the same time. Follows Operational Restriction pattern.",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL TransferFunds)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "Member States shall ensure that a payment service provider applies strong customer authentication where the payer: (b) initiates an electronic payment transaction.",
+                "scope": "Strong Customer Authentication",
+                "reference": {
+                    "source_id": "PSD2-Art97(1)(b)"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Technical Robustness and Safety",
+                "Privacy and Data Governance"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Maps sensitive financial action (P1=PayBill) to require authorization (P2=CheckAuthorization) to have occurred before or at the same time. Follows Operational Restriction pattern.",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL PayBill)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "API endpoints performing sensitive actions must verify the user is authorized for that action.",
+                "scope": "Function Level Authorization",
+                "definition": "Derived from OWASP ASVS V4.1.1 & PSD2 SCA principles. Ensures users only perform allowed actions.",
+                "reference": {
+                    "source_id": "OWASP ASVS V4.1.1/PSD2-SCA"
+                }
+            },
+            "ethical_principles": [
+                "Privacy and Data Governance",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P2) UNTIL P1)",
+            "api_mapping_analysis": "Maps sensitive data access action (P1=GetAccountStatement) to require authorization (P2=CheckAuthorization) to have occurred before or at the same time. Follows Operational Restriction pattern.",
+            "final_ltl_rule": "NOT ((NOT CheckAuthorization) UNTIL GetAccountStatement)"
+        },
+        {
+            "source_policy": {
+                "policy_description": "All security-relevant events, including data access and transaction initiation, must be recorded in a secure audit log.",
+                "scope": "Auditing",
+                "definition": "Derived general security best practices supporting PSD2. Mandates logging of security-relevant events.",
+                "reference": {
+                    "source_id": "PSD2-Audit-Requirement"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Privacy and Data Governance",
+                "Transparency",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Maps sensitive financial action (P1=TransferFunds) to require eventual audit logging (P2=RecordAuditEvent). Follows Instruction Adherence pattern.",
+            "final_ltl_rule": "ALWAYS (TransferFunds IMPLIES EVENTUALLY(RecordAuditEvent))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "All security-relevant events, including data access and transaction initiation, must be recorded in a secure audit log.",
+                "scope": "Operational and Security Risks",
+                "definition": "Derived from PSD2 Art 95 and standard security best practices (e.g., OWASP ASVS V10).",
+                "reference": {
+                    "source_id": "PSD2-Audit-Requirement"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Privacy and Data Governance",
+                "Transparency",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Maps sensitive financial action (P1=PayBill) to require eventual audit logging (P2=RecordAuditEvent). Follows Instruction Adherence pattern.",
+            "final_ltl_rule": "ALWAYS (PayBill IMPLIES EVENTUALLY(RecordAuditEvent))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "All security-relevant events, including data access and transaction initiation, must be recorded in a secure audit log.",
+                "scope": "Operational and Security Risks",
+                "definition": "Derived from PSD2 Art 95 and standard security best practices (e.g., OWASP ASVS V10).",
+                "reference": {
+                    "source_id": "Audit-Requirement"
+                }
+            },
+            "ethical_principles": [
+                "Human Agency and Oversight",
+                "Privacy and Data Governance",
+                "Transparency",
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Instruction Adherence",
+            "ltl_template": "ALWAYS (P1 IMPLIES EVENTUALLY(P2))",
+            "api_mapping_analysis": "Maps sensitive data access action (P1=GetAccountStatement) to require eventual audit logging (P2=RecordAuditEvent). Follows Instruction Adherence pattern.",
+            "final_ltl_rule": "ALWAYS (GetAccountStatement IMPLIES EVENTUALLY(RecordAuditEvent))"
+        },
+        {
+            "source_policy": {
+                "policy_description": "A bill payment can only be made to a payee that has been successfully identified via search.",
+                "scope": "Business Logic / Workflow",
+                "definition": "This is a standard banking workflow rule to ensure the payee_id is valid and known before a payment is sent.",
+                "reference": {
+                    "source_id": "Workflow-Payee"
+                }
+            },
+            "ethical_principles": [
+                "Technical Robustness and Safety"
+            ],
+            "risk_category": "Operational Restriction",
+            "ltl_template": "NOT ((NOT P1) UNTIL P2)",
+            "api_mapping_analysis": "Maps the business logic requirement that a payee search (P1=SearchPayee) must happen at some point before a bill is paid (P2=PayBill).",
+            "final_ltl_rule": "NOT ((NOT SearchPayee) UNTIL PayBill)"
+        }
+    ]
+}

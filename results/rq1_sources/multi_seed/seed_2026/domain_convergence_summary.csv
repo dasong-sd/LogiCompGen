@@ -1,0 +1,4 @@
+attempt_count,consecutive_saturated_batches,domain,duplicate_ratio,master_seed,number_of_batches,runtime_seconds,status,stop_reason,trace_count_at_convergence,unique_2grams,unique_3grams,unique_4grams,unique_full_trace_count,valid_trace_count_at_stop
+1294,5,bank_manager,0.41854838709677417,2026,62,4.840056657791138,converged,convergence,1240,49,247,801,721,1240
+10633,5,teladoc,0.5941666666666666,2026,180,18.996888637542725,converged,convergence,3600,118,695,1798,1461,3600
+12056,0,smart_lock,0.1352,2026,250,33.380897998809814,max_limit_reached_without_convergence,max_limit_reached_without_convergence,,139,1140,4790,4324,5000
